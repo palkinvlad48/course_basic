@@ -1,0 +1,84 @@
+.header {
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+}
+.header-body {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-head {
+  display: flex;
+}
+.logo {
+  width: 173px;
+  height: 100px;
+  background-image: url('../svg/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-head {
+  position: relative;
+}
+.btn-head::before {
+  content: url('../svg/common.svg');
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -26px;
+  margin-right: 18px;
+}
+.menu-head__item:not(:last-child) {
+  margin-right: 50px;
+}
+.header a:hover {
+  color: var(--color-hover);
+}
+.genre {
+  
+  display: flex;
+  justify-content: space-between;
+}
+.menu-genre {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.container-head {
+  height: 70px;
+  padding-top: 24px;
+}
+.menu-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.genre__select {
+  position: relative;
+  /*cursor: pointer;*/
+}
+.genre__select::after {
+  content: url('../svg/down.svg');
+  padding-left: 5px;
+}
+.genre__select:hover {
+  color: var(--color-hover);
+}
+.genre__select:not(:last-child) {
+  margin-right: 120px;
+}
+.btn-search {
+  position: relative;
+}
+.btn-search::before {
+  content: url('../svg/search.svg');
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -26px;
+  margin-right: 18px;
+}

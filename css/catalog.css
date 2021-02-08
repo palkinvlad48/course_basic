@@ -1,0 +1,228 @@
+.catalog {
+  margin-bottom: 60px;
+}
+.catalog-body {
+  margin-bottom: 16px;
+}
+.catalog-top {
+  display: flex;
+  justify-content: start;
+}
+.catalog-top__flags {
+  width: 476px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+.flags-item-link {
+  width: 46px;
+  height: 58px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
+.italia {
+  background-image: url('../img/flag_italia.png');
+}
+.germany {
+  background-image: url('../img/flag_germany.png');
+}
+.france {
+  background-image: url('../img/flag_france.png');
+}
+.russia {
+  background-image: url('../img/flag_russia.png');
+}
+.espana {
+  background-image: url('../img/flag_espana.png');
+}
+.catalog-introduction {
+  width: 1090px;
+  margin-bottom: 40px;
+  padding-left: 0px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-align: left;
+}
+.catalog-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.card-autor {
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+}
+.autor-img {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+}
+.autor-name {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 0.014em;
+}
+.autor-date {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+.autor-desc {
+  font-size: 16px;
+  line-height: 32px;
+  text-align: left;
+}
+.catalog-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.accordeon-wrap {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.wrap-text {
+  display: flex;
+}
+.h2-tab {/*
+  position: absolute;*/
+  height: 80px;
+  margin: 40px 40px 0 0px;
+  display: inline-block;
+}
+
+/* accordion */
+.accordion-text {
+  width: 33.33%;
+}
+.ui-accordion-header {
+  width: 100%;
+  text-align: left;
+}
+/*  */
+.ui-accordion-header-icon,
+.ui-icon,
+.ui-icon-triangle-1-e {
+  fill: white;
+  color: white;
+}
+/* 1-й вариант
+.ui-icon, .ui-widget-content .ui-icon {
+    background: none !important;
+}  2-й вариант */
+.ui-icon {
+  width: 0;
+  height: 0 !important;
+}
+.list-autors {
+  height: 110px;
+}
+.accordion-text {
+  position: relative;
+  width: 100%;
+  height: 114px !important;
+  margin: 0;
+  display: flex;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 32px;/**/
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+}
+.ui-accordion-header-active,
+.ui-state-active {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.period {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 92%;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+.period:active {
+  background-color: white !important;
+}
+.period:hover,
+.period:focus {
+  color: var(--color-hover);
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0;
+  margin-left: auto;
+  background-image: url('../svg/c_down.svg');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+.circle:hover {
+  background-image: url('../svg/c_down_h.svg'); /* --color-acc-hover: #9D5CD0 */
+}
+.circle:active {
+  background-image: url('../svg/c_u.svg'); /* --color-acc-active: #7943A4 */
+}
+
+.circle-up {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0;
+  margin-left: auto;
+  background-image: url('../svg/c_u.svg');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+.circle:active {
+  background-image: url('../svg/c_u.svg');/*
+  transform: translate(2px, 1px) rotate(180deg);*/
+}
+
+/*
+.question-text::after {
+  content: '';
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  max-height: 50px;
+  margin-right: 0;
+  margin-left: auto;
+  line-height: 100%;
+  justify-content: space-between;
+  vertical-align: middle;
+  background-image: url('../svg/circle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* работает, когда сначала класс, потом элемент !!!
+.question-text:hover::after {
+  background-image: url('../svg/c_d.svg');
+}
+.question-text:active::after {
+  background: none;
+  transform: translate(2px, 1px) rotate(45deg);
+}
+*/

@@ -1,0 +1,222 @@
+.galery {
+  margin-bottom: 60px;
+}
+.galery-bg {
+  width: 100%;
+  max-width: 1920px;
+  background-image: url('../img/galery_fon.jpg');
+}
+.galery-body {
+  height: 995px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  color: #fff;
+}
+.galery-left {
+  width: 22%; /*400px;*/
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  padding-top: 10px;
+}
+.galery-title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+  text-align: left;
+}
+.label-filter {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+/*.galery-filter */
+.wrap-select {
+  width: 360px;/**/
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;/* 1px solid white;*/
+}
+/* choices */
+.choices {
+  width: 360px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.choices__inner {
+  background: none;
+  border: none;
+}
+.choices__item {
+  width: 360px;
+  background-color: #000;
+  border: none;
+}
+.choices__input {
+  display: none !important;
+}
+.choices__list {
+  width: 360px;
+  overflow-x: hidden !important;
+  border: 1px solid #cc826e;
+  border-top: none;
+  border-radius: 10px;
+}
+.choices__list--single {/*
+  padding: 12px 4px 0px 4px;*/
+  width: 90%;
+  border: none;
+}
+.choices__item--selectable {
+  background-color: black;
+}
+.is-active {
+  width: 360px;
+  background-color: black;
+  border: 2px solid red;
+}
+.is-focused {
+  width: 360px;
+  background-color: black;
+  border: 2px solid red;
+}/*
+.choices__list {
+  background-color: red;
+}/*
+.choices__list--dropdown {
+  width: 355px;
+  background-color: red;
+}/*
+.is-focused {
+  background-color: black;
+}
+.choices::after {
+  content: '';
+  height: 0;
+  width: 0;
+  border: none;
+}
+/* proba */
+.choices__list--dropdown .choices__item--selectable {/*
+background-color: #b7b7b7; /* red;/**/
+color: #b7b7b7;
+}
+/*
+.is-flipped .choices__list--dropdown 
+/* .is-open .choices__list--dropdown{border-color:#b7b7b7}.is-flipped .choices__list--dropdown
+.is-disabled .choices__list--multiple .choices__item 
+.choices__item.is-highlighted {
+  background-color: red;
+.choices__list--multiple 
+
+choices__item
+.choices__item--selectable {
+  background-color: #2f2f2f;
+}
+.choices__list--single 
+.choices[data-type*=select-one].is-open:after {
+  content: '';
+  background-color: #000
+}*/
+.choices[data-type*=select-one].is-open {
+  border-color: #333;/**/
+  border: none;/*
+  content: '';*/
+  width: 30px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: 0;
+  background-color: #333;
+} 
+.choices[data-type*=select-one]:active {
+  content: '';
+}
+/* */
+.galery-desc {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+.galery-rigth {
+  width: 1150px;
+  height: 100%;
+}
+.choices__button:focus {
+  color: yellow;
+}
+.choices[data-type*=select-one] {
+  color: #fff;
+}
+/*.choices__button:hover{opacity:1} 
+.choices[data-type*=select-one],*/
+.choices__button:focus {
+  box-shadow:0 0 0 2px #000;/*#00bcd4;*/
+}/*
+.choices[data-type*=select-one] {
+  background-color: red;
+}/*
+.choices__item[data-value=]:active {
+  background-color: red;
+}*/
+  
+.choices__button {
+  display:none
+}
+.choices[data-type*=select-one]:after {
+  content: url('../svg/down.svg');
+  padding-right: 10px;
+  margin-top: -12px;
+}
+/* swiper */
+.swiper-container {
+  width: 100%; /*1150px;*/
+  max-width: 1150px;
+  height: 940px; 
+  padding-top: 60px;
+}
+.swiper-wrapper {
+  height: 740px;
+  margin-top: 40px;
+}
+.swiper-slide {
+  margin-top: 0px;
+  font-size: 18px;
+  align-items: center;
+  background: #fff;
+  height: calc((100% - 40px) / 2);
+  padding: 0;
+}
+.slide-hide {
+  display: none;
+}
+/* custmm bullets style */
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color:#000;
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+  color:#fff;
+  background: var(--color-orange); 
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  --swiper-navigation-color: var(--color-orange);
+}
+.swiper-wrapper .future {
+  display: block;
+}
+.swiper-wrapper .realism {
+  display: none !important;
+}

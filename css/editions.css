@@ -1,0 +1,180 @@
+.editions {
+  width: 100%;
+  height: 763px;
+  padding-top: 20px;
+  margin-bottom: 60px;
+  background-image: url('../img/birmingham_MK_98_C44.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.editions__body {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.editions__body .content__title {
+  padding: 0;
+  margin-bottom: 10px;
+}
+.editions__body-left {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.choices-category {
+  padding-bottom: 12px;
+}
+.form-group {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.form-group input {
+  padding: 0;
+  height: 15px;
+  width: 15px;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+.form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: pointer;
+  margin-right: 12px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.form-group input:checked + label:after {
+  content: '\2713';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-weight: bold;
+  color: #CCB26E;
+}
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.category-title,
+.price__title {
+  font-weight: 700;
+  line-height: 32px;
+}
+.price__title {
+  margin-bottom: 10px;
+}
+.price__range {
+  width: 304px;
+  display: flex;
+  border: 1px solid #fff;
+}
+.price-input {
+  width: 78px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: var(--color-violet);
+}
+.price input::-webkit-input-placeholder { 
+  color: #fff; 
+}
+.price input::-moz-placeholder { 
+  color: #fff; 
+}
+.range-number {
+  padding: 4px 8px 0;
+}
+.editions__body-right {
+  width: 1150px;
+}
+/* swiper */
+.editions-container {
+  width: 100%; 
+  max-width: 1150px;
+  height: 700px; 
+  padding-top: 60px;
+}
+.editions-wrapper {
+  position: relative;
+  height: 690px;
+  margin-top: 40px;
+}
+.editions-slide {
+  height: 650px;
+  padding: 0;
+  margin-top: 0px;
+  font-size: 18px;
+  align-items: center;
+  background: none;
+}
+.slide-num {
+  position: absolute;
+  display: block;
+  top: 39px;
+  left: 54px;/*
+  background-color: aqua;*/
+  color: #cfcfcf;
+  
+  z-index: 2000;
+}
+.card-edition img {
+  max-width: 350px;
+  height: 390px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+.card-edition {
+  width: 350px;
+  height: 620px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: none;
+}
+.text-body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+.edition-name,
+.edition-span {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+.edition-name {
+  width: 250px;   
+}
+.edition-span {
+  font-weight: 400;
+}
+.btn-order {
+  width: 110px;
+  height: 32px;
+  margin-left: 2px;
+  border: 1px solid violet;
+  border-radius: 1em;
+  color: #fff;
+  background: none;
+}
