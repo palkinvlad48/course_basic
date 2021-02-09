@@ -58,6 +58,13 @@
   margin-right: 10px;
   display: flex;
   flex-direction: column;
+  background-color: #eee;
+}
+.card-hide {
+  display: none;/*
+  position: absolute;
+  top: 0;
+  left: -2000px;*/
 }
 .autor-img {
   padding: 0;
@@ -69,6 +76,7 @@
 }
 .autor-name {
   margin-bottom: 12px;
+  padding: 0px 20px;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
@@ -77,11 +85,13 @@
 }
 .autor-date {
   margin-bottom: 5px;
+  padding: 0px 20px;
   font-size: 12px;
   line-height: 16px;
   text-align: left;
 }
 .autor-desc {
+  padding: 0px 20px 10px;
   font-size: 16px;
   line-height: 32px;
   text-align: left;
@@ -131,18 +141,26 @@
 .list-autors {
   height: 110px;
 }
-.accordion-text {
+.accordion-text-col {
   position: relative;
-  width: 100%;
-  height: 114px !important;
+  width: 30%;/*
+  height: 114px !important;*/
   margin: 0;
+  margin-right: 10px;
   display: flex;
-  text-align: left;
-  vertical-align: middle;
+  text-align: left;/*
+  vertical-align: middle;*/
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 32px;/**/
   border: none;
-  border-bottom: 1px solid var(--color-gray);
+}
+.accordion-text-col a {
+  color: var(--color-violet);
+  text-decoration: underline;
+}
+.accordion-text-col a:hover {
+  color: var(--color-hover);
 }
 .ui-accordion-header-active,
 .ui-state-active {

@@ -167,8 +167,8 @@ function accordionBtnClick() {
     let idInt, ind = 0
     let delta = 0
     let delta_icon = 0
- //   console.log(butId)
- 
+    //   console.log(butId)
+
     if (butId) {
       if (butId.length < 8) {
         idInt = parseInt(butId.slice(-1))
@@ -246,7 +246,7 @@ function scrollMenu() {
       let tarhref = $(tar).attr('href')
 
       if (tarhref === "#about-us") {
-        delY = 800
+        delY = 750
       }
 
       $('html, body').animate({ scrollTop: $(tarhref).offset().top + delY }, 600)
@@ -258,7 +258,7 @@ scrollMenu()
 /* */
 function scrollContacts() {
 
-  const targ = document.querySelector('.btn-head')
+  const targ = document.querySelector('.btn-hero')
 
   targ.addEventListener('click', function (e) {
 
@@ -273,7 +273,7 @@ function scrollContacts() {
 }
 scrollContacts()
 
-/* фильтр по цене */
+/* фильтр галереи */
 let valueFilterGalery = 0
 
 function filterGalery() {
@@ -286,26 +286,61 @@ function filterGalery() {
 
   function valueFilter(nam) {
     valueFilterGalery = nam
-    //  console.log(valueFilterGalery);
 
     const arrGalery = document.querySelectorAll('.swiper-slide')
-    console.log(nam + ' ' + arrGalery)
+
     let i = 0
     let ii = 0
 
     arrGalery.forEach((elem) => {
       const slgnСurrent = elem.dataset.filtr
-    
+
       if (slgnСurrent != nam) {
-        elem.parentNode.removeChild(elem);
+        elem.parentNode.removeChild(elem)
         ii++
       } else {
         i++
       }
-      
+
     })
-    console.log('elem - '+ i + '-' + ii)
+    console.log('elem - ' + i + '-' + ii)
   }
 }
 filterGalery()
-//console.log(valueFilterGalery)
+
+/* карточка автора */
+
+let tarOld = ''
+function showAutor() {
+
+  let tarO = Object
+  const tar = document.querySelectorAll('.wrap-autor-link')
+
+  tar.forEach((elem) => {
+    //const slgnСurrent = elem.dataset.filtr
+
+    //console.log(tar.dataset.link + '-' + tarOld)
+    elem.addEventListener('click', function (e) {
+
+      e.preventDefault()
+
+      const tarEv = e.target
+      if (tarOld === '') {
+        tarOld = 'kramskoy'
+      }
+      if (tarEv.dataset.link != tarOld) {
+        tarO = document.getElementById(tarOld)
+        const tarNew = document.getElementById(tarEv.dataset.link)
+
+        tarNew.classList.toggle('card-hide')
+
+        tarO.classList.add('card-hide')
+
+        console.log(tarEv.dataset.link + '-' + tarOld)
+        tarOld = tarEv.dataset.link
+      }
+    })
+  })
+  //}
+}
+showAutor()
