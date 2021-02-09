@@ -158,26 +158,26 @@ function accordionIconClick() {
   })
 }
 /* для кнопки аккордеона */
-function accordionBtnClick(num) {
+function accordionBtnClick() {
 
-  $('#accordion_' + num).on('click', '.list-autors', function (event) {
+  $('body').on('click', '.list-autors', function (event) {
 
     let tar = this
     let butId = tar.id
     let idInt, ind = 0
     let delta = 0
     let delta_icon = 0
-
-    if (num === 2) {
-      delta = 14
-      delta_icon = 20
-    }
-
+ //   console.log(butId)
+ 
     if (butId) {
       if (butId.length < 8) {
         idInt = parseInt(butId.slice(-1))
       } else {
         idInt = parseInt(butId.slice(-2))
+        if (idInt > 14) {
+          delta = 14
+          delta_icon = 20
+        }
       }
       idInt = idInt - delta
       ind = Math.ceil(idInt / 2)
@@ -208,8 +208,8 @@ function accordionBtnClick(num) {
   })
 }
 accordionIconClick()
-accordionBtnClick(1)
-accordionBtnClick(2)
+accordionBtnClick()
+
 /* все новости */
 function eventsAllClick() {
 
