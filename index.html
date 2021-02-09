@@ -181,7 +181,8 @@
                   <div class="swiper-slide" data-filtr="3"><img src="./img/realism_11.jpg" alt="картина"></div>
                   <div class="swiper-slide" data-filtr="2"><img src="./img/realism_12.jpg" alt="картина"></div>
                   <div class="swiper-slide" data-filtr="3"><img src="./img/serov_prud.png" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/kramskoy.jpg" alt="Крамской автопортрет"></div>
+                  <div class="swiper-slide" data-filtr="2"><img src="./img/kramskoy.jpg" alt="Крамской автопортрет">
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,7 +193,7 @@
     <section class="catalog" id="catalog">
       <div class="container">
         <div class="catalog-body">
-      
+
           <div class="tabs">
             <h2 class="content__title h2-tab">Каталог</h2>
 
@@ -219,18 +220,33 @@
             <div class="tab-c" id="content-1">
 
               <div class="catalog-footer">
-                <div class="card-autor">
+                <div class="card-autor"  id="domeniko">
                   <img class="autor-img" src="./img/domeniko.jpg" alt="портрет автора">
                   <h3 class="autor-name">Доменико Гирландайо</h3>
                   <p class="autor-date">2 июня 1448 — 11 января 1494.</p>
                   <p class="autor-desc">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                     продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
-                    течение
-                    года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
-                    всевозможными
-                    подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
+                    течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
+                    всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают
+                    знатные граждане
                     Флоренции в костюмах того времени).
+                  </p>
+                </div>
+                <div class="card-autor card-hide"  id="perudgyno">
+                  <img class="autor-img" src="./img/perudgyno.jpg" alt="портрет автора">
+                  <h3 class="autor-name">Пьетро Перуджино</h3>
+                  <p class="autor-date">между 1445-1452 — 11 января 1494</p>
+                  <p class="autor-desc">
+                    Итальянский живописец эпохи Раннего Возрождения. Представитель умбрийской школы. Испытал влияние
+                    Пьеро делла
+                    Франческа, нидерландских мастеров, а также А. Верроккьо, в мастерской которого во Флоренции работал
+                    с 1470.
+                    Живопись Перуджино отличается плавностью композиционных ритмов, лиризмом пейзажных фонов,
+                    изображающих холмистые
+                    дали Умбрии. Ясная уравновешенность пространственного построения, особая гармоничность и мягкая
+                    грациозность
+                    отличают произведения Перуджино.
                   </p>
                 </div>
                 <div class="accordeon-wrap">
@@ -254,7 +270,7 @@
                       <p class="accordion-text-col">
                         Веккьетта
                         Андреа Верроккьо
-                        Доменико Гирландайо
+                        <a class="wrap-autor-link" href="#domeniko" data-link="domeniko">Доменико Гирландайо</a>
                         Беноццо Гоццоли
                         Граначчи, Франческо
                         Грегорио ди Чекко
@@ -265,8 +281,8 @@
                       <p class="accordion-text-col">
                         Парентино, Бернардо
                         Пезеллино
-                        Пьетро Перуджино
                         Перуцци, Бальдассаре
+                        <a class="wrap-autor-link" href="#perudgyno" data-link="perudgyno">Пьетро Перуджино</a>
                         Пизанелло
                         Пинтуриккьо
                       </p>
@@ -487,7 +503,8 @@
                     «Неизвестная», которую также часто называют «Незнакомкой». Вокруг этой картины еще при жизни
                     художника
                     ходило много
-                    слухов. Кем была женщина, изображенная передвижником? Автор не раскрыл этой тайны, и на сегодняшний
+                    слухов. Кем была женщина, изображенная передвижником? Автор не раскрыл этой тайны, и на
+                    сегодняшний
                     момент
                     существует
                     много интересных версий относительно прототипа самой известной «Неизвестной».
@@ -498,7 +515,7 @@
                   <h3 class="autor-name">Ге Никола́й Николаевич</h3>
                   <p class="autor-date"> 15 февраля 1831 г. — 1 июня 1894 г.</p>
                   <p class="autor-desc">
-                    Русский художник-живописец и рисовальщик, мастер портретов, исторических и 
+                    Русский художник-живописец и рисовальщик, мастер портретов, исторических и
                     религиозных полотен. Изредка выполнял также скульптурные работы.
                   </p>
                 </div>
@@ -578,7 +595,7 @@
                         Брюллов Карл
                         Васнецов Виктор,<br>
                         Врубель Михаил,<br>
-                        <a class="wrap-autor-link" href="#ge" data-link="ge">Ге Николай</a> 
+                        <a class="wrap-autor-link" href="#ge" data-link="ge">Ге Николай</a>
                       </p>
                       <p class="accordion-text-col">
                         Левитан Исаак
@@ -952,8 +969,10 @@
           <div class="social-body">
             <p class="social-title">Связаться в один клик</p>
             <ul class="social-list">
-              <li class="social-item"><a href="https://web.whatsapp.com/" target="blank" class="social-link whats-app"></a></li>
-              <li class="social-item"><a href="https://telegram.com" target="blank" class="social-link telegram"></a></li>
+              <li class="social-item"><a href="https://web.whatsapp.com/" target="blank"
+                  class="social-link whats-app"></a></li>
+              <li class="social-item"><a href="https://telegram.com" target="blank" class="social-link telegram"></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -968,9 +987,12 @@
       <div class="footer-body">
         <div class="footer-logo"></div>
         <ul class="footer-list">
-          <li class="footer-list-item"><a href="https://www.vk.com" target="blank" class="footer-list-item-link wk"></a></li>
-          <li class="footer-list-item"><a href="https://www.instagram.com" target="blank" class="footer-list-item-link inst"></a></li>
-          <li class="footer-list-item"><a href="https://www.facebook.com/skillboxru" target="blank" class="footer-list-item-link fb"></a></li>
+          <li class="footer-list-item"><a href="https://www.vk.com" target="blank" class="footer-list-item-link wk"></a>
+          </li>
+          <li class="footer-list-item"><a href="https://www.instagram.com" target="blank"
+              class="footer-list-item-link inst"></a></li>
+          <li class="footer-list-item"><a href="https://www.facebook.com/skillboxru" target="blank"
+              class="footer-list-item-link fb"></a></li>
         </ul>
       </div>
     </div>

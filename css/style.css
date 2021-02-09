@@ -9,7 +9,10 @@ html {
   --color-violet: #9D5CD0;
   --color-danger: red;
   --color-gray: #E5E5E5;
-  --delta-y: 60px;
+  --delta-y: 60px;/*
+  --name-tab-1: 'domeniko';
+  --name-tab-2: 'kramskoy';
+  --name-current: '';*/
 }
 *,
 *::before,

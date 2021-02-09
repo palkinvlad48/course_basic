@@ -157,6 +157,7 @@ function accordionIconClick() {
 
   })
 }
+let tarOld = ''
 /* для кнопки аккордеона */
 function accordionBtnClick() {
 
@@ -172,11 +173,13 @@ function accordionBtnClick() {
     if (butId) {
       if (butId.length < 8) {
         idInt = parseInt(butId.slice(-1))
+        tarOld = 'domeniko'
       } else {
         idInt = parseInt(butId.slice(-2))
         if (idInt > 14) {
           delta = 14
           delta_icon = 20
+          tarOld = 'kramskoy'
         }
       }
       idInt = idInt - delta
@@ -310,37 +313,39 @@ filterGalery()
 
 /* карточка автора */
 
-let tarOld = ''
 function showAutor() {
-
+/*
+  let root = document.querySelector(':root')
+  const rootStyles = getComputedStyle(root)
+  console.log(root)
+  tarOld = rootStyles.getPropertyValue('--name-current')
+  console.log(tarOld)*/
   let tarO = Object
   const tar = document.querySelectorAll('.wrap-autor-link')
 
   tar.forEach((elem) => {
-    //const slgnСurrent = elem.dataset.filtr
-
-    //console.log(tar.dataset.link + '-' + tarOld)
+    
     elem.addEventListener('click', function (e) {
 
       e.preventDefault()
 
       const tarEv = e.target
-      if (tarOld === '') {
-        tarOld = 'kramskoy'
-      }
+
       if (tarEv.dataset.link != tarOld) {
         tarO = document.getElementById(tarOld)
+
         const tarNew = document.getElementById(tarEv.dataset.link)
+
+        console.log(tarNew) 
 
         tarNew.classList.toggle('card-hide')
 
         tarO.classList.add('card-hide')
 
-        console.log(tarEv.dataset.link + '-' + tarOld)
         tarOld = tarEv.dataset.link
       }
     })
   })
-  //}
+  
 }
 showAutor()
