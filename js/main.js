@@ -1,4 +1,70 @@
 //$(document).ready(function () {
+let nameAutor = "123"
+const setData = {
+  images: [{},
+  {
+    name: '',
+    autor: "Кандинский Василий",
+    descr: "Картина написана в 1922 г. ...",
+  },
+  {
+    name: 'Заросший пруд',
+    autor: "Серов ",
+    descr: "Картина написана в 1889 г.<br>В ней он запечатлел....",
+  }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
+  {}, {}, {},
+  {
+    name: 'Незнакомка',
+    autor: "Крамской Иван Николаевич",
+    descr:"Картина написана в 1889 г.<br>В ней он запечатлел...." ,
+  }, {}, {}, {}, {}, {}, {}, {},
+  {
+    name: 'Картина Радостная Структура',
+    autor: "Кандинский Василий ",
+    descr: "Какие треугольники и пилы! Веселых ярких красок перелив из звездных блесток, нот цветов и пыли, в картине художника Кандинского Василия слышен радостный мотив ...",
+  }, 
+  {}, {},
+  ],
+}
+/* заготовка модального окна */
+function clickGalery() { //alert('yes')
+  const targ = document.querySelectorAll('.swiper-slide')
+  const valueG = document.getElementById('currG')
+
+  targ.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const tarG = e.target
+      let valSpan = tarG.parentElement.ariaLabel
+      valueG.innerHTML = valSpan
+      let img = tarG.src.indexOf('/img') + 5
+      let nameImg = tarG.src.slice(img)
+      let num = nameImg.slice(-7, -4)
+      let numInt = parseInt(num)
+      if (tarG.src.includes('_0') || setData.images[numInt].descr != undefined) {
+
+        //      console.log(nameImg + 'beg-' + img + '-end -' + num);
+        viewImg(nameImg, num)
+      } else { alert('Описание картины не готово! ') }
+    })
+  })
+
+  function viewImg(name, num) {
+    console.log(name)
+    const objectV = document.getElementById('imgV')
+    // .toggle('modal-window')
+    objectV.classList.remove('img-hide')
+    objectV.classList.add('modal-window')
+
+    let numInt = parseInt(num)
+
+    objectV.innerHTML = "<img class='modal-img' src='./img/" + name + "'>" +
+      "<div class='modal-img-descr'>" + setData.images[numInt].descr + "</div>";
+    $('#imgV').css({ 'left': '500px' })
+    //objectV.nextSibling.src = './img/' + name + '>';
+
+  }
+}
+clickGalery()
 /* Italia */
 function initAccItalia() {
   $("#accordion_1").accordion({
@@ -37,18 +103,19 @@ function initSwiper() {
   var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     slidesPerColumn: 2,
-    spaceBetween: 39,
-    loop: false,
+    slidesPerColumnFill: "row",// как заполнять слайд слайдами
+    spaceBetween: 38,
+    loop: true,
     updateOnWindowResize: true,
     parallax: false,
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: false,
-      clickable: true,
+      clickable: true,/*
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
         return '<span class="' + className + '"></span>';
-      },
+      },*/
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -70,30 +137,106 @@ function initSwiperEditions() {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    renderFraction: function (currentClass, totalClass) {
-      return '<span className="' + currentClass + '"></span>' +
-        ' of ' +
-        '<span className="' + totalClass + '"></span>';
+    },/*
+    renderFraction: function (num_curr, num_all) {
+      return '<span className="' + num_curr + '">(index + 1)</span>' +
+        ' / ' +
+        '<span className="' + num_all + '"></span>';
+    },/**/
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: false,
+
+      renderBullet: function (index, num_curr) {
+        //   console.log('bullet-'+index)
+        return '<span class="' + num_curr + '- yes' + '">' + (index + 1) + '</span>';
+        //return '<span class="' + num_curr + '"></span>';
+      },/**/
     },
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+
+
   })
+
 }
 initSwiperEditions()
+/* заготовка */
+function clickSlide() {
+  const targ = document.querySelectorAll('.editions-slide')
+  const valueR = document.getElementById('currE')
+  targ.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      // e.stopPropagation()
+      const tarE = e.target
+      let valSpan = tarE.parentNode.parentElement.ariaLabel
+      console.log('1-' + valSpan)
+      valueR.innerHTML = valSpan
+      //swiper-slide swiper-slide-active
+    })
+  })
+}
+clickSlide()
+
+/* заготовка модального окна 
+function clickGalery() {
+  const targ = document.querySelectorAll('.swiper-slide')
+  const valueG = document.getElementById('currG')
+  //console.log(valueG.parentElement + '-' + targ.ariaLabel)
+  valueG.innerHTML = targ.ariaLabel
+
+  targ.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const tarG = e.target
+      let valSpan = tarG.parentElement.ariaLabel
+      valueG.innerHTML = valSpan
+      let img = tarG.src.indexOf('img/')
+      let nameImg = tarG.src.slice(img + 4)
+      let num = nameImg.slice(-5, -4)
+      console.log('beg-' + num + '-end')
+      viewImg(nameImg, num)
+    })
+  })
+  
+  function viewImg(name, num) {
+    console.log(name)
+    const objectV = document.getElementById('imgV')
+    //$('#imgV').classList.add('modal-window') //toggle('modal-window')
+    objectV.classList.remove('img-hide')
+    objectV.classList.add('modal-window')
+    //$('#imgV')
+    objectV.innerHTML = "<img src='./img/" + name + "'>" +
+      "<div style='color: #fff;'>" + descr[num] + "</div>";
+    $('#imgV').css({ 'left': '500px' })
+    //objectV.nextSibling.src = './img/' + name + '>';
+    console.log('Yes: ' + name + '-' + objectV.classList)
+    //const ob = objectV.parentNode.appendChild('img')
+    //objectV.innerHTML = "<img class='.img-proba' src=" + "./img/"+ name +">";
+    //console.log(objectV.innerHTML)
+  }
+}
+clickGalery() */
+/* вывод номера текущего слайда */
+function initGalery() {
+  const targ = document.querySelector('.swiper-slide-active') //.swiper-slide')
+  const valueSpan = document.getElementById('currG')
+  //console.log()
+  valueSpan.innerHTML = targ.ariaLabel;
+}
+initGalery()
 
 /* partners */
 function initSwiperPartners() {
-  var mySwiperPartners = new Swiper('.swiper-partners-container', {
-
+  var mySwiperPartners = new Swiper('.swiper-container', {
     slidesPerView: 3,
-    loop: false,
+    loop: true,
     centerSlides: true,
-    direction: 'horizontal',/*
-  height: '240px',*/
+    /*  direction: 'horizontal',
+    height: '240px',*/
     autoHeight: false,
-    slideClass: 'partners-slide',
+    slideClass: 'partners-slide',/**/
     slideNextClass: 'slide-next',
     slidePrevClass: 'slide-prev',
     navigation: {
@@ -314,17 +457,17 @@ filterGalery()
 /* карточка автора */
 
 function showAutor() {
-/*
-  let root = document.querySelector(':root')
-  const rootStyles = getComputedStyle(root)
-  console.log(root)
-  tarOld = rootStyles.getPropertyValue('--name-current')
-  console.log(tarOld)*/
+  /*
+    let root = document.querySelector(':root')
+    const rootStyles = getComputedStyle(root)
+    console.log(root)
+    tarOld = rootStyles.getPropertyValue('--name-current')
+    console.log(tarOld)*/
   let tarO = Object
   const tar = document.querySelectorAll('.wrap-autor-link')
 
   tar.forEach((elem) => {
-    
+
     elem.addEventListener('click', function (e) {
 
       e.preventDefault()
@@ -336,7 +479,7 @@ function showAutor() {
 
         const tarNew = document.getElementById(tarEv.dataset.link)
 
-        console.log(tarNew) 
+        //  console.log('autor-'+tarNew)
 
         tarNew.classList.toggle('card-hide')
 
@@ -346,6 +489,6 @@ function showAutor() {
       }
     })
   })
-  
+
 }
 showAutor()

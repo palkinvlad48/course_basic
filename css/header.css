@@ -3,10 +3,12 @@
   background-color: #000;
   color: #fff;
 }
-.header-body {
-  display: flex;
+.header-body {  
   height: 100%;
-  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: start; /*space-between;*/
   align-items: center;
 }
 .menu-head {
@@ -15,12 +17,15 @@
 .logo {
   width: 173px;
   height: 100px;
+  margin-right: 180px;
   background-image: url('../svg/logo.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .btn-head {
   position: relative;
+  margin-right: 0;
+  margin-left: auto;
 }
 .btn-head::before {
   content: url('../svg/common.svg');
@@ -31,47 +36,84 @@
   margin-right: 18px;
 }
 .menu-head__item:not(:last-child) {
-  margin-right: 50px;
+  padding: 0;
+  margin: 0;
+  margin-right: 72px;
 }
 .header a:hover {
   color: var(--color-hover);
 }
 .genre {
-  
   display: flex;
   justify-content: space-between;
+  align-items: center;/**/
+  background: none;
+}
+.btn-genre {
+  display: inline-block;
+  padding: 0px;
+  color: #fff;
+ 
 }
 .menu-genre {
-  position: absolute;
   width: 100%;
-  height: 70px;
-  top: 100px;
-  background: rgba(0, 0, 0, 0.4);
+  height: 69px;
+  padding: 0;
+  background: rgba(163,163,163,163,0.6);/*
+  border: 1px solid red;
+  z-index: 3100;/*
+  opacity: 0.6;/**/
+  background-image: url('../img/birmingam_top.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;/**/
 }
 .container-head {
-  height: 70px;
-  padding-top: 24px;
+  height: 68px;
+  z-index: 3000;
+  background: none;
 }
 .menu-body {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
+  background: none;
 }
-.genre__select {
+.btn-genre {
   position: relative;
-  /*cursor: pointer;*/
+  height: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  z-index: 100;
+  background: none;
 }
-.genre__select::after {
+.btn-genre::after {
   content: url('../svg/down.svg');
-  padding-left: 5px;
+  padding-left: 7px;
 }
-.genre__select:hover {
+.btn-genre:hover {
   color: var(--color-hover);
 }
-.genre__select:not(:last-child) {
-  margin-right: 120px;
+.btn-genre:hover::after {
+  content: url('../svg/down_v.svg');
+  color: var(--color-hover);
+}
+
+.btn-genre:not(:last-child) {
+  margin-right: 110px;
+}
+.search-body {
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
 }
 .btn-search {
+  display: inline-block;
   position: relative;
 }
 .btn-search::before {
@@ -81,4 +123,19 @@
   position: absolute;
   left: -26px;
   margin-right: 18px;
+}
+.btn-search:hover::before {
+  content: url('../svg/search_v.svg');
+  width: 20px;
+  height: 20px;
+  color: var(--color-hover);
+}
+.line-search {
+  padding-top: 7px;
+  height: 5px;
+  width: 218px;
+  border-bottom: 1px solid #fff;
+}
+.line-search:hover {/* ??? */
+  border-color: var(--color-hover);
 }

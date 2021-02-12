@@ -2371,7 +2371,7 @@
         swiper.clickedIndex = parseInt($(slide).attr('data-swiper-slide-index'), 10);
       } else {
         swiper.clickedIndex = $(slide).index();
-   //     console.log('num=' + swiper.clickedIndex);
+        //     console.log('num=' + swiper.clickedIndex);
       }
     } else {
       swiper.clickedSlide = undefined;
@@ -8049,7 +8049,7 @@
       return $el;
     },
     onEnterKey: function onEnterKey(e) {
-      var swiper = this;
+      var swiper = this; //console.log(this)
       var params = swiper.params.a11y;
       if (e.keyCode !== 13) return;
       var $targetEl = $(e.target);

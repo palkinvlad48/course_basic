@@ -1,0 +1,27 @@
+.modal-body {
+  position: fixed;
+  top: 0;
+  left: -2000px;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  opacity: 0.0;
+}
+.modal-window {
+  width: 600px;
+  display: flex;
+
+}
+.modal-img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+
+} 
+.modal-img-descr {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--color-bg);
+}

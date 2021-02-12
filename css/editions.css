@@ -63,8 +63,8 @@
   position: absolute;
   top: 3px;
   left: 5px;
-  font-weight: bold;
-  color: #CCB26E;
+  font-weight: 700;
+  color: var(--color-violet);/* #CCB26E;*/
 }
 .price {
   width: 100%;
