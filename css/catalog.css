@@ -2,7 +2,8 @@
   margin-bottom: 60px;
 }
 .catalog-body {
-  margin-bottom: 16px;
+  margin-bottom: 36px;
+  padding: 0;
 }
 .catalog-top {
   display: flex;
@@ -43,12 +44,10 @@
 }
 .catalog-introduction {
   width: 1090px;
-  margin-bottom: 40px;
-  padding-left: 0;/*
-  font-size: 16px;
-  letter-spacing: 0;
+  margin-bottom: 30px;
+  padding-left: 0;
+  margin-top: -10px;
   line-height: 32px;
-  text-align: left;*/
 }
 .catalog-footer {
   display: flex;
@@ -61,7 +60,7 @@
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  background-color: var(color-bg);
+  background-color: var(--color-bg);
 }
 .card-hide {
   display: none;
@@ -69,17 +68,18 @@
 .autor-img {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   width: 100%;
   height: 470px;
   object-fit: contain;
 }
 .autor-name {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   padding: 0; 
   padding-right: 20px;
   font-size: 24px;
   font-weight: 600;
+  line-height: 20px;
   letter-spacing: 0.014em;
 }
 .autor-date {
@@ -98,8 +98,9 @@
   text-align: left;
 }
 .catalog-footer {
+  padding-top: 8px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .accordeon-wrap {
   width: 800px;
@@ -140,8 +141,21 @@
 }
 .list-autors {
   height: 110px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  background: var(--color-bg) !important;
 }
-.accordion-text-col {
+.ui-state-default {
+  border: none !important;
+  border-top: 1px solid #c5c5c5 !important;
+}
+.accordeon-wrap {
+  border-bottom: 1px solid #c5c5c5;
+}
+.period-life {
   position: relative;
   width: 30%;
   margin: 0;
@@ -162,53 +176,54 @@
   background-color: var(--color-bg) !important;
   color: #000 !important;
 }
-.period {
+.period-life {
   position: relative;
   display: inline-block;
   margin: 0;
   padding: 0;
-  width: 92%;
+  width: 90%;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
   text-align: left;
 }
-.period:active {
+.period-life:active {
   background-color: var(--color-bg) !important;
 }
-.period:hover,
-.period:focus {
+.period-life:hover,
+.period-life:focus {
   color: var(--color-hover);
 }
 .circle {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0;
   margin-left: auto;
   background-image: url('../svg/c_down.svg');
   background-repeat: no-repeat;
-  background-size: 30px 30px;
+  background-size: 50px 50px;
   background-position: center;
 }
 .circle:hover {
   background-image: url('../svg/c_down_h.svg'); /* --color-acc-hover: #9D5CD0 */
 }
-.circle:active {
+
+.circle-up:hover:active {
   background-image: url('../svg/c_u.svg'); /* --color-acc-active: #7943A4 */
 }
 
 .circle-up {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0;
   margin-left: auto;
   background-image: url('../svg/c_u.svg');
   background-repeat: no-repeat;
-  background-size: 30px 30px;
+  background-size: 50px 50px;
   background-position: center;
 }
 .circle:active {

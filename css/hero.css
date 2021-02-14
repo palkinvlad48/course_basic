@@ -1,36 +1,42 @@
 .hero {
   margin-top: 68px;
+  
 }
 .img-hero {
   padding: 0;
-  height: 735px;
+  margin-bottom: 13px;
+  height: 630px;
   object-fit: cover;
+  z-index: 2;
 }
 .img-content {
   position: absolute;
   top: 240px;
   padding-right: 200px;
-  width: 44%; /*550px;*/
+  width: 42%; /*550px;*/
   color: #fff;
+  z-index: 3;
 }
 .img-content__title {
+  width: 100%;
   margin-bottom: 20px;
   font-size: 72px;
   font-weight: 700;
   line-height: 83px;
   letter-spacing: 0em;
   text-align: left;
+  z-index: 1;
 }
 .img-content__desc {
   width: 100%;
-  margin-bottom: 114px;
+  margin-bottom: 116px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.1em;
   text-align: left;
 }
 .btn-hero {
-  padding: 24px 40px;
+  padding: 24px 32px;
   background-color: #9d5cd0;
   border-radius: 100px;
   font-weight: 700;

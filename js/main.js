@@ -3,36 +3,48 @@ let nameAutor = "123"
 const setData = {
   images: [{},
   {
-    name: '',
+    name: 'Без названия',
     autor: "Кандинский Василий",
+    date: "1922-1924",
     descr: "Картина написана в 1922 г. ...",
   },
   {
-    name: 'Заросший пруд',
-    autor: "Серов ",
-    descr: "Картина написана в 1889 г.<br>В ней он запечатлел....",
+    name: '"Женщина с граблями"',
+    autor: "Казимир Малевич ",
+    date: "1931-1932",
+    descr: "Картина из второй серии крестьянского цикла работ автора. К.Малевич принялся за ее создание в 1930-1931 годах, после того, как 1-й цикл был утерян после Берлинской и Варшавской выставок в 1927 году.",
   }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
-    {}, {}, {}, 
-    {
-      name: 'Незнакомка',
-      autor: "Крамской Иван Николаевич",
-      descr: "Картина 'Незнакомка' написана в 18... г.<br>В ней он запечатлел....",
-    },
+  {}, {}, {},
   {
     name: 'Незнакомка',
     autor: "Крамской Иван Николаевич",
-    descr:"Картина 'Незнакомка' написана в 18... г.<br>В ней он запечатлел...." ,
-  }, {}, {}, {}, 
+    date: "1931-1932",
+    descr: 'Картина "Незнакомка" написана в 18... г.<br>На ней он запечатлел....',
+  },
+  {
+    name: 'Незнакомка',
+    autor: "Крамской Иван Николаевич",
+    date: "1931-1932",
+    descr: "Картина 'Незнакомка' написана в 18... г.<br>В ней он запечатлел....",
+  }, {}, {}, {},
   {
     name: 'Портрет Ге',
-    autor: "",
+    autor: "Неизвестен",
+    date: "1980...",
     descr: "Портрет русского живописца Ге....",
-  }, {}, {},
+  },
+  {
+    name: 'Портрет Крамского Ивана Николаевича',
+    autor: "С фото",
+    date: "1980...",
+    descr: "Портрет русского живописца Крамского Ивана Николаевича....",
+  }, {},
   {
     name: 'Картина Радостная Структура',
     autor: "Кандинский Василий ",
+    date: "1980...",
     descr: "Какие треугольники и пилы! Веселых ярких красок перелив из звездных блесток, нот цветов и пыли, в картине художника Кандинского Василия слышен радостный мотив ...",
-  }, 
+  },
   {}, {},
   ],
 }
@@ -40,7 +52,7 @@ const setData = {
 function clickGalery() { //alert('yes')
   const targ = document.querySelectorAll('.swiper-slide')
   const valueG = document.getElementById('currG')
-
+  console.log(valueG)
   targ.forEach((el) => {
     el.addEventListener('click', function (e) {
       const tarG = e.target
@@ -65,13 +77,17 @@ function clickGalery() { //alert('yes')
     // .toggle('modal-window')
     objectV.classList.remove('img-hide')
     objectV.classList.add('modal-window')
-
+    //$('#modal').css({"left": "0;"})
     let numInt = parseInt(num)
 
     objectV.innerHTML = "<img class='modal-img' src='./img/" + name + "'>" +
-      "<div class='modal-img-descr'>" + setData.images[numInt].descr + "</div>";
+      "<div style='background-color:#fff; padding:20px'>" +
+      "<div class='autor-name'>" + setData.images[numInt].name + "</div>" +
+      "<div class='autor-date'>" + setData.images[numInt].date + "</div>" +
+      "<div class='autor-descr'>" + setData.images[numInt].descr + "</div>" +
+      "</div>";
     $('#imgV').css({ 'left': '500px' })
-    //objectV.nextSibling.src = './img/' + name + '>';
+    //$('#modal').css({ 'left': '0px' })
 
   }
 }
@@ -116,7 +132,7 @@ function initSwiper() {
     slidesPerColumn: 2,
     slidesPerColumnFill: "row",// как заполнять слайд слайдами
     spaceBetween: 38,
-    loop: true,
+    loop: false,
     updateOnWindowResize: true,
     parallax: false,
     pagination: {
@@ -161,14 +177,13 @@ function initSwiperEditions() {
 
       renderBullet: function (index, num_curr) {
         //   console.log('bullet-'+index)
-        return '<span class="' + num_curr + '- yes' + '">' + (index + 1) + '</span>';
+        return '<span class="' + num_curr + '">' + (index + 1) + '</span>';
         //return '<span class="' + num_curr + '"></span>';
       },/**/
     },
     scrollbar: {
       el: '.swiper-scrollbar',
     },
-
 
   })
 
@@ -234,7 +249,7 @@ function initGalery() {
   const targ = document.querySelector('.swiper-slide-active') //.swiper-slide')
   const valueSpan = document.getElementById('currG')
   //console.log()
-  valueSpan.innerHTML = targ.ariaLabel;
+  valueSpan.innerHTML = targ.ariaLabel
 }
 initGalery()
 

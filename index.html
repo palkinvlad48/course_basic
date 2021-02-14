@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - художественная галерея</title>
 
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
 
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
-  
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-600.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin-->
+
   <link rel="stylesheet" type="text/css" href="./css/choices.min.css">
 
   <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.css">
+  <link rel="stylesheet" type="text/css" href="./css/dropdown.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="stylesheet" type="text/css" href="./css/header.css">
   <link rel="stylesheet" type="text/css" href="./css/hero.css">
@@ -28,62 +29,110 @@
   <link rel="stylesheet" type="text/css" href="./css/editions.css">
   <link rel="stylesheet" type="text/css" href="./css/partners.css">
   <link rel="stylesheet" type="text/css" href="./css/contacts.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-  <link rel="stylesheet" type="text/css" href="css/modal.css">
-  <link rel="stylesheet" type="text/css" href="css/media.css">
-  
+  <link rel="stylesheet" type="text/css" href="./css/footer.css">
+  <link rel="stylesheet" type="text/css" href="./css/modal.css">
+  <link rel="stylesheet" type="text/css" href="./css/media.css">
+
   <!-- аккордеон -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- select -->
-  <script src="js/choices.min.js"></script>
+  <script src="./js/choices.min.js"></script>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-  <!--script src="js/main.js"></script-->
+  <!--script src="./js/main.js"></script-->
 
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <nav class="header-body">
-        <img class="logo" src="svg/logo.svg" alt="лoготип фирмы">
-        <ul class="menu-head">
-          <li class="menu-head__item">
-            <a class="menu-head__item-link" href="#about-us">О нас</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#galery">Галерея</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#catalog">Каталог</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#events">События</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#editions">Издания</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#projects">Проекты</a>
-          </li>
-          <li class="menu-head__item">
-            <a href="#contacts">Контакты</a>
-          </li>
-        </ul>
+      <div class="header-body">
+        <nav class="wrap">
+          <img class="logo" src="svg/logo.svg" alt="лoготип фирмы">
+          <ul class="menu-head">
+            <li class="menu-head__item">
+              <a class="menu-head__item-link" href="#about-us">О нас</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#galery">Галерея</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#catalog">Каталог</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#events">События</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#editions">Издания</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#projects">Проекты</a>
+            </li>
+            <li class="menu-head__item">
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
         <a class="btn-head" href="/">Войти</a>
-      </nav>
+      </div>
     </div>
     <div class="menu-genre">
       <div class="container container-head">
         <div class="menu-body">
-          <nav class="genre">
-            <button class="btn-genre">Реализм</button>
-            <button class="btn-genre">Импрессионизм</button>
-            <button class="btn-genre">Постимпрессионизм</button>
-            <button class="btn-genre">Авангард</button>
-            <button class="btn-genre">Футуризм</button>
+
+          <nav class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn genre__select" onclick="myFunction()" data-id="1">Реализм
+              </button>
+              <div class="dropdown-content" id="1">
+                <a href="#domeniko">Верроккьо</a>
+                <a href="#">Леонардо</a>
+                <a href="#">Фридрих</a>
+                <a href="#">Тинторетто</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn genre__select" onclick="myFunction()" data-id="2">Импрессионизм
+              </button>
+              <div class="dropdown-content" id="2">
+                <a href="#">Ренуар</a>
+                <a href="#">Мане</a>
+                <a href="#">Сислей</a>
+                <a href="#">Моне</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn genre__select" onclick="myFunction()" data-id="3">Постимпрессионизм
+              </button>
+              <div class="dropdown-content" id="3">
+                <a href="#">Сёра</a>
+                <a href="#">Гоген</a>
+                <a href="#">Сезан</a>
+                <a href="#">Ван Гог</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn genre__select" onclick="myFunction()" data-id="4">Авангард
+              </button>
+              <div class="dropdown-content" id="4">
+                <a href="#">Пикассо</a>
+                <a href="#">Малевич</a>
+                <a href="#">Маринетти</a>
+                <a href="#">Кандинский</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn genre__select" onclick="myFunction()" data-id="5">Футуризм
+              </button>
+              <div class="dropdown-content" id="5">
+                <a href="#">Балла</a>
+                <a href="#">Северини</a>
+                <a href="#">Прателла</a>
+                <a href="#">Карра</a>
+              </div>
+            </div>
           </nav>
           <div class="search-body">
             <a class="btn-search">Поиск по сайту</a>
@@ -92,19 +141,18 @@
         </div>
       </div>
     </div>
-    <!--/div-->
   </header>
   <main class="main">
     <section class="hero" id="about-us">
-      <img class="img-hero" src="./img/birmingam_bottom.jpg" alt="картина">
+      <img class="img-hero" src="./img/bottom.jpg" alt="картина">
       <div class="container">
         <div class="img-content">
           <h1 class="img-content__title">
             Прикоснитесь к&nbsp;прекрасному
           </h1>
           <p class="img-content__desc">
-            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
-            предпосылки для новых предложений.
+            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+            предложений.
           </p>
           <a class="btn-hero" href="#form">Подписаться на рассылку</a>
         </div>
@@ -223,17 +271,15 @@
             <input type="radio" name="tab-btn" id="tab-btn-5" value="">
             <label for="tab-btn-5"><span class="flags-item-link espana"></span></label>
 
-            <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
-              континентально-европейского типа политической
-              культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
-              общей
-              картины,
-              стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
-              которые жаждут быть функционально разнесены на независимые элементы.
-            </p>
-
             <div class="tab-c" id="content-1">
-
+              <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
+                континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
+                общей
+                картины,
+                стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
+                которые жаждут быть функционально разнесены на независимые элементы.
+              </p>
               <div class="catalog-footer">
                 <div class="card-autor" id="domeniko">
                   <img class="autor-img" src="./img/domeniko.jpg" alt="портрет автора">
@@ -267,7 +313,7 @@
                 <div class="accordeon-wrap">
                   <div id="accordion_1" class="">
                     <button class="list-autors">
-                      <span class="period">С 1400 по 1499</span>
+                      <span class="period-life">С 1400 по 1499</span>
                       <span class="circle" id="1"></span>
                     </button>
                     <div class="wrap-text">
@@ -303,7 +349,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1500 по 1599</span>
+                      <span class="period-life">С 1500 по 1599</span>
                       <span class="circle" id="2"></span>
                     </button>
                     <div class="wrap-text">
@@ -334,7 +380,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1600 по 1699</span>
+                      <span class="period-life">С 1600 по 1699</span>
                       <span class="circle" id="3"></span>
                     </button>
                     <div class="wrap-text">
@@ -365,7 +411,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1700 по 1799</span>
+                      <span class="period-life">С 1700 по 1799</span>
                       <span class="circle" id="4"></span>
                     </button>
                     <div class="wrap-text">
@@ -398,7 +444,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1800 по 1899</span>
+                      <span class="period-life">С 1800 по 1899</span>
                       <span class="circle" id="5"></span>
                     </button>
                     <div class="wrap-text">
@@ -434,7 +480,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1900 по 1999</span>
+                      <span class="period-life">С 1900 по 1999</span>
                       <span class="circle" id="6"></span>
                     </button>
                     <div class="wrap-text">
@@ -470,7 +516,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 2000</span>
+                      <span class="period-life">С 2000</span>
                       <span class="circle" id="7"></span>
                     </button>
                     <div class="wrap-text">
@@ -507,6 +553,14 @@
               </div>
             </div>
             <div class="tab-c" id="content-2">
+              <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
+                континентально-европейского типа политической
+                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
+                общей
+                картины,
+                стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
+                которые жаждут быть функционально разнесены на независимые элементы.
+              </p>
               <div class="catalog-footer">
                 <div class="card-autor" id="kramskoy">
                   <img class="autor-img" src="./img/kramskoy_034.jpg" alt="портрет автора">
@@ -535,7 +589,7 @@
                 <div class="accordeon-wrap">
                   <div id="accordion_2" class="">
                     <button class="list-autors">
-                      <span class="period">С 1400 по 1499</span>
+                      <span class="period-life">С 1400 по 1499</span>
                       <span class="circle" id="21"></span>
                     </button>
                     <div class="wrap-text">
@@ -551,7 +605,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1500 по 1599</span>
+                      <span class="period-life">С 1500 по 1599</span>
                       <span class="circle" id="22"></span>
                     </button>
                     <div class="wrap-text">
@@ -566,7 +620,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1600 по 1699</span>
+                      <span class="period-life">С 1600 по 1699</span>
                       <span class="circle" id="23"></span>
                     </button>
                     <div class="wrap-text">
@@ -581,7 +635,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1700 по 1799</span>
+                      <span class="period-life">С 1700 по 1799</span>
                       <span class="circle" id="24"></span>
                     </button>
                     <div class="wrap-text">
@@ -599,7 +653,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1800 по 1899</span>
+                      <span class="period-life">С 1800 по 1899</span>
                       <span class="circle" id="25"></span>
                     </button>
                     <div class="wrap-text">
@@ -623,7 +677,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 1900 по 1999</span>
+                      <span class="period-life">С 1900 по 1999</span>
                       <span class="circle" id="26"></span>
                     </button>
                     <div class="wrap-text">
@@ -641,7 +695,7 @@
                       </p>
                     </div>
                     <button class="list-autors">
-                      <span class="period">С 2000</span>
+                      <span class="period-life">С 2000</span>
                       <span class="circle" id="27"></span>
                     </button>
                     <div class="wrap-text">
@@ -1009,7 +1063,9 @@
       </div>
     </div>
   </footer>
-  <div id="imgV" class="img-hide"></div>
+  <!--div class="modal-body" id="modal">
+    <div id="imgV" class="img-hide"></div>
+  </div-->
   <script src="./js/just-validate.js"></script>
   <script src="./js/inputmask.min.js"></script>
 
@@ -1046,6 +1102,7 @@
   <script src="./js/swiper-bundle.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/map.js"></script>
+  <script src="./js/dropdown.js"></script>
 </body>
 
 </html>
