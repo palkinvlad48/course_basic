@@ -403,7 +403,7 @@ function eventsAllClick() {
   })
 }
 eventsAllClick()
-/* скролл от меню  */
+/* скролл от шапки  */
 function scrollMenu() {
 
   const targ = document.querySelectorAll('.menu-head__item-link')
@@ -418,7 +418,7 @@ function scrollMenu() {
       let tarhref = $(tar).attr('href')
 
       if (tarhref === "#about-us") {
-        delY = 750
+        delY = 650
       }
 
       $('html, body').animate({ scrollTop: $(tarhref).offset().top + delY }, 600)
@@ -427,24 +427,6 @@ function scrollMenu() {
   })
 }
 scrollMenu()
-/* */
-function scrollContacts() {
-
-  const targ = document.querySelector('.btn-hero')
-
-  targ.addEventListener('click', function (e) {
-
-    e.preventDefault()
-
-    const tar = e.target
-    const tarhref = $(this).attr('href')
-
-    $('html, body').animate({ scrollTop: $(tarhref).offset().top }, 700)
-
-  })
-}
-scrollContacts()
-
 /* фильтр галереи */
 let valueFilterGalery = 0
 

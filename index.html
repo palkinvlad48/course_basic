@@ -56,26 +56,26 @@
               <a class="menu-head__item-link" href="#about-us">О нас</a>
             </li>
             <li class="menu-head__item">
-              <a href="#galery">Галерея</a>
+              <a class="menu-head__item-link" href="#galery">Галерея</a>
             </li>
             <li class="menu-head__item">
-              <a href="#catalog">Каталог</a>
+              <a class="menu-head__item-link" href="#catalog">Каталог</a>
             </li>
             <li class="menu-head__item">
-              <a href="#events">События</a>
+              <a class="menu-head__item-link" href="#events">События</a>
             </li>
             <li class="menu-head__item">
-              <a href="#editions">Издания</a>
+              <a class="menu-head__item-link" href="#editions">Издания</a>
             </li>
             <li class="menu-head__item">
-              <a href="#projects">Проекты</a>
+              <a class="menu-head__item-link" href="#projects">Проекты</a>
             </li>
             <li class="menu-head__item">
-              <a href="#contacts">Контакты</a>
+              <a class="menu-head__item-link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
-        <a class="btn-head" href="/">Войти</a>
+        <a class="btn-head menu-head__item-link" href="#form">Войти</a>
       </div>
     </div>
     <div class="menu-genre">
@@ -84,7 +84,7 @@
 
           <nav class="navbar">
             <div class="dropdown">
-              <button class="dropbtn genre__select" onclick="myFunction()" data-id="1">Реализм
+              <button class="dropbtn genre__select" data-id="1">Реализм
               </button>
               <div class="dropdown-content" id="1">
                 <a href="#domeniko">Верроккьо</a>
@@ -94,7 +94,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn genre__select" onclick="myFunction()" data-id="2">Импрессионизм
+              <button class="dropbtn genre__select" data-id="2">Импрессионизм
               </button>
               <div class="dropdown-content" id="2">
                 <a href="#">Ренуар</a>
@@ -104,7 +104,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn genre__select" onclick="myFunction()" data-id="3">Постимпрессионизм
+              <button class="dropbtn genre__select" data-id="3">Постимпрессионизм
               </button>
               <div class="dropdown-content" id="3">
                 <a href="#">Сёра</a>
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn genre__select" onclick="myFunction()" data-id="4">Авангард
+              <button class="dropbtn genre__select" data-id="4">Авангард
               </button>
               <div class="dropdown-content" id="4">
                 <a href="#">Пикассо</a>
@@ -124,7 +124,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn genre__select" onclick="myFunction()" data-id="5">Футуризм
+              <button class="dropbtn genre__select" data-id="5">Футуризм
               </button>
               <div class="dropdown-content" id="5">
                 <a href="#">Балла</a>
@@ -205,7 +205,7 @@
                 <div class="slide-num"><span id="currG" class="">`${nameAutor}`</span></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <!--div class="swiper-pagination"></div-->
+
 
                 <div class="swiper-wrapper future" data-genre="future">
                   <div class="swiper-slide galery-slide" data-filtr="3"><img src="./img/future_001.jpg" alt="картина">
@@ -271,15 +271,16 @@
             <input type="radio" name="tab-btn" id="tab-btn-5" value="">
             <label for="tab-btn-5"><span class="flags-item-link espana"></span></label>
 
-            <div class="tab-c" id="content-1">
-              <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
-                континентально-европейского типа политической
-                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
-                общей
-                картины,
-                стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
-                которые жаждут быть функционально разнесены на независимые элементы.
-              </p>
+
+            <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
+              континентально-европейского типа политической
+              культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
+              общей
+              картины,
+              стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
+              которые жаждут быть функционально разнесены на независимые элементы.
+            </p>
+            <div class="" id="content-1">
               <div class="catalog-footer">
                 <div class="card-autor" id="domeniko">
                   <img class="autor-img" src="./img/domeniko.jpg" alt="портрет автора">
@@ -552,15 +553,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-c" id="content-2">
-              <p class="catalog-introduction">Акционеры крупнейших компаний, которые представляют собой яркий пример
-                континентально-европейского типа политической
-                культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью
-                общей
-                картины,
-                стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов,
-                которые жаждут быть функционально разнесены на независимые элементы.
-              </p>
+            <div class="" id="content-2">
               <div class="catalog-footer">
                 <div class="card-autor" id="kramskoy">
                   <img class="autor-img" src="./img/kramskoy_034.jpg" alt="портрет автора">
@@ -659,8 +652,8 @@
                     <div class="wrap-text">
                       <p class="accordion-text-col">
                         Брюллов Карл
-                        Васнецов Виктор<br>
-                        Врубель Михаил<br>
+                        Васнецов Виктор
+                        Врубель Михаил
                         <a class="wrap-autor-link" href="#ge" data-link="ge">Ге Николай</a>
                       </p>
                       <p class="accordion-text-col">
@@ -711,7 +704,7 @@
                         Миронов&nbsp;Евгений
                       </p>
                       <p class="accordion-text-col">
-                        Ткаченко&nbsp;Данила,<br>
+                        Ткаченко&nbsp;Данила,
                         Федотов-Федоров&nbsp;Илья,
                         Чернышова&nbsp;Ольга,
                         Яковлева&nbsp;Устина
@@ -721,13 +714,13 @@
                 </div>
               </div>
             </div>
-            <div class="tab-c" id="content-3">
+            <div class="" id="content-3">
               <p style="color:blue; font-weight: 700;">Живопись Германии...</p>
             </div>
-            <div class="tab-c" id="content-4">
+            <div class="" id="content-4">
               <p style="color:blue; font-weight: 700;">Живопись Франции...</p>
             </div>
-            <div class="tab-c" id="content-5">
+            <div class="" id="content-5">
               <p style="color:blue; font-weight: 700;">Живопись Испании...</p>
             </div>
           </div>
@@ -1066,7 +1059,7 @@
   <!--div class="modal-body" id="modal">
     <div id="imgV" class="img-hide"></div>
   </div-->
-  <script src="./js/just-validate.js"></script>
+  <!--script src="./js/just-validate.js"></script>
   <script src="./js/inputmask.min.js"></script>
 
   <script>
@@ -1096,7 +1089,7 @@
         },
       }
     })
-  </script>
+  </script-->
 
 
   <script src="./js/swiper-bundle.js"></script>

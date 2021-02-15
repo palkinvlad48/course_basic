@@ -1,21 +1,20 @@
 .header {
-  height: 100px;
   background-color: #000;
   color: #fff;
+  position: relative;
+  z-index: 10;
 }
 .header-body {  
-  height: 100%;/*
-  padding: 0;
-  margin: 0;*/
+  height: 100%;
   display: flex;
   justify-content: start; /*space-between;*/
   align-items: center;
 }
 .menu-head {
-  display: flex;/**/
+  display: flex;
   padding-bottom: 6px;
   padding-left: 179px;
-  align-items: center;/**/
+  align-items: center;
 }
 /**/
 .wrap {
@@ -73,13 +72,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.8;/**/
-  z-index: 20;
+  opacity: 0.8;/*
+  z-index: 20;*/
 }
 .container-head {
-  height: 73px;/* height: 68px;
-  z-index: 3000;
-  background: none;*/
   padding-top: 10px;
 }
 .menu-body {/*

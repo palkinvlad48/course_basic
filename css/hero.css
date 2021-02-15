@@ -1,13 +1,14 @@
-.hero {
-  margin-top: 68px;
-  
+.hero {/*
+  position: relative;*/
+  margin-top: 0px;
 }
 .img-hero {
+  position: relative;/**/
   padding: 0;
   margin-bottom: 13px;
   height: 630px;
   object-fit: cover;
-  z-index: 2;
+  z-index: 2;/**/
 }
 .img-content {
   position: absolute;
@@ -15,7 +16,7 @@
   padding-right: 200px;
   width: 42%; /*550px;*/
   color: #fff;
-  z-index: 3;
+  z-index: 2;
 }
 .img-content__title {
   width: 100%;
@@ -25,6 +26,7 @@
   line-height: 83px;
   letter-spacing: 0em;
   text-align: left;
+  position: relative;
   z-index: 1;
 }
 .img-content__desc {

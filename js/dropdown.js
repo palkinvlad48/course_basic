@@ -1,33 +1,38 @@
 /* переключает между скрытие и отображение раскрывающегося содержимого */
-function myFunction() {
-  let dd = ""
-  const btn = document.querySelectorAll('.dropbtn');
-  // btn.lastChild.classList.toggle("show")
-  // console.log('new: ' btn + '-' + btn.lastChild);
-  // + btn.lastChild.classList
-  let old = Object
-  btn.forEach((elem) => {
+let old = null
 
-    elem.addEventListener('click', function (e) {
-      let et = e.target
-      let ei = et.dataset.id
-      //et.classList.toggle("show");
-      // console.log('et: ' + et)
-      //console.log('new: ' + et.classList + '-' + et.childNodes[0].textContent)
-      //.css({'display': ''})// classList.toggle("show")
-      //if (!e.target.matches('.dropbtn')) {
-      let myDropdown = document.getElementById(ei) // + va);
-      //if (!e.target.matches('.dropbtn')) {
-      myDropdown.classList.toggle('show')
-      if (old != myDropdown) {
-        //  old.classList.toggle('show') 
-        old = myDropdown
-      }
-      console.log('new: ' + old.classList + '-' + et.childNodes[0].textContent)
-      //}
-      // if (myDropdown.classList.contains('show')) {
-      // myDropdown.classList.remove('show');
-      // }
-    })
-  })
+function clickDrop() {
+  $('.dropbtn').on('click', function (e) {
+    this.classList.toggle("show")
+    //console.log('this-' + this.classList);
+    const dropId = $(this).data('id')
+
+    if (old) {
+      old.classList.remove('show');
+      //this.classList.remove("show")
+    }
+
+    let myDropdown = document.getElementById(dropId);
+    // console.log('myDropdown-' + myDropdown.classList);
+    //if (!e.target.matches('.dropbtn')) { 
+    // соответствует ли элемент указанному css-селектору
+    // работает с 1-го раза, но не убирает
+
+    //  if (myDropdown.target.matches('.dropbtn')) {
+
+    if (this.classList.contains('show')) {
+      //является ли узел потомком данного узла,
+      //работает со 2-го раза
+      myDropdown.classList.remove('show');
+
+    } else {
+      myDropdown.classList.add("show")
+      //this.classList.toggle("show")
+      old = myDropdown
+    }
+
+    //} 
+    console.log('this-' + this.classList + '-' + myDropdown.classList);
+  });
 }
+clickDrop()

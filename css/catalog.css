@@ -13,19 +13,25 @@
   width: 476px;
   height: 60px;
   display: flex;
-  justify-content: space-around;
-  margin-left: 20px;
+  justify-content: space-around;/*
+  margin-left: 20px;/**/
 }
 .flags-item-link {
   width: 80px;
   height: 64px;
-  margin-left: -10px;
-  margin-top: -2px;
+  margin-left: -17px;/* окружность вокруг флага*/
+  margin-top: -3px;
   display: inline-block;
   background: var(--color-bg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 45px 45px;
+  background-size: 45px 45px;/*
+  width: 46px;
+  height: 58px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 45px 45px;*/
 }
 .italia {
   background-image: url('../img/flag_italia.png');
@@ -44,17 +50,22 @@
 }
 .catalog-introduction {
   width: 1090px;
-  margin-bottom: 30px;
-  padding-left: 0;
-  margin-top: -10px;
+  margin-bottom: 40px;
+  padding-left: 0px;
+  font-size: 16px;
+  letter-spacing: 0;
   line-height: 32px;
+  text-align: left;/*
+  margin-bottom: 30px;
+  margin-top: -10px;*/
 }
 .catalog-footer {
   display: flex;
-  flex: 0 0 50%;
+  flex: 0 0 50%; /**/
   justify-content: space-between;
 }
-.card-autor {
+.card-autor {/*
+  width: 750px; */
   width: 50%;
   max-width: 750px;
   margin-right: 10px;
@@ -62,18 +73,27 @@
   flex-direction: column;
   background-color: var(--color-bg);
 }
+/* new */ 
 .card-hide {
   display: none;
 }
+/**/
 .autor-img {
   padding: 0;
-  margin: 0;
+  margin: 0;/*
+  margin-bottom: 30px;*/
   margin-bottom: 34px;
   width: 100%;
   height: 470px;
   object-fit: contain;
 }
-.autor-name {
+.autor-name {/*
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 0.014em;*/
   margin-bottom: 18px;
   padding: 0; 
   padding-right: 20px;
@@ -84,11 +104,11 @@
 }
 .autor-date {
   margin-bottom: 5px;
+  font-size: 12px;/*
+  line-height: 16px;
+  text-align: left;*/
   padding: 0; 
   padding-right: 20px;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: left;
 }
 .autor-desc {
   padding: 0; 
@@ -100,7 +120,8 @@
 .catalog-footer {
   padding-top: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;/*
+  justify-content: space-around;*/
 }
 .accordeon-wrap {
   width: 800px;
@@ -116,10 +137,10 @@
   display: inline-block;
 }
 
-/* accordion */
+/* accordion 
 .accordion-text {
   width: 33.33%;
-}
+}*/
 .ui-accordion-header {
   width: 100%;
   text-align: left;
@@ -140,40 +161,33 @@
   height: 0 !important;
 }
 .list-autors {
-  height: 110px;
+  padding: 39px 0 !important;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-
   background: var(--color-bg) !important;
 }
-.ui-state-default {
-  border: none !important;
-  border-top: 1px solid #c5c5c5 !important;
-}
-.accordeon-wrap {
-  border-bottom: 1px solid #c5c5c5;
-}
-.period-life {
-  position: relative;
-  width: 30%;
+.accordion-text-col {
+  width: 33.33%;
+  padding-right: 50px;
+  /* 100%;
   margin: 0;
-  margin-right: 10px;
   display: flex;
-  flex-wrap: wrap;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 32px;
   border: none;
+  border-bottom: 1px solid var(--color-gray);*/
 }
-.accordion-text-col a {
+.wrap-autor-link {
   color: var(--color-violet);
   text-decoration: underline;
 }
-.accordion-text-col a:hover {
-  color: var(--color-hover);
-}
 .ui-accordion-header-active,
 .ui-state-active {
-  background-color: var(--color-bg) !important;
+  background-color: #fff !important;
   color: #000 !important;
 }
 .period-life {
@@ -186,6 +200,18 @@
   font-weight: 600;
   line-height: 32px;
   text-align: left;
+}
+.accordion-text-col a {
+  color: var(--color-violet);/*
+  text-decoration: underline;*/
+}
+.accordion-text-col a:hover {
+  color: var(--color-hover);
+}
+.ui-accordion-header-active,
+.ui-state-active {
+  background-color: var(--color-bg) !important;
+  color: #000 !important;
 }
 .period-life:active {
   background-color: var(--color-bg) !important;
@@ -205,11 +231,13 @@
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: center;
-}
+}/*
 .circle:hover {
-  background-image: url('../svg/c_down_h.svg'); /* --color-acc-hover: #9D5CD0 */
+  background-image: url('../svg/c_down_h.svg'); 
 }
-
+.circle:active {
+  background-image: url('../svg/c_u.svg'); 
+}*/
 .circle-up:hover:active {
   background-image: url('../svg/c_u.svg'); /* --color-acc-active: #7943A4 */
 }
