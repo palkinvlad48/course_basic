@@ -1,7 +1,24 @@
 /* переключает между скрытие и отображение раскрывающегося содержимого */
 let old = null
+function deleteDrop() {
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
 
+      const dropdowns = document.getElementsByClassName("dropdown-content");
+      let i = 0
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+}
+deleteDrop()
+/* */
 function clickDrop() {
+  deleteDrop()
   $('.dropbtn').on('click', function (e) {
     this.classList.toggle("show")
     //console.log('this-' + this.classList);
@@ -9,30 +26,22 @@ function clickDrop() {
 
     if (old) {
       old.classList.remove('show');
-      //this.classList.remove("show")
-    }
+    } //else { deleteDrop() }
 
     let myDropdown = document.getElementById(dropId);
-    // console.log('myDropdown-' + myDropdown.classList);
-    //if (!e.target.matches('.dropbtn')) { 
-    // соответствует ли элемент указанному css-селектору
+ 
+    // e.target.matches - соответствует ли элемент указанному css-селектору
     // работает с 1-го раза, но не убирает
 
-    //  if (myDropdown.target.matches('.dropbtn')) {
-
-    if (this.classList.contains('show')) {
-      //является ли узел потомком данного узла,
+    if (!this.classList.contains('show')) {
+      // this.classList.contains('show') - является ли узел потомком данного узла,
       //работает со 2-го раза
-      myDropdown.classList.remove('show');
-
-    } else {
       myDropdown.classList.add("show")
-      //this.classList.toggle("show")
       old = myDropdown
+    } else {
+      myDropdown.classList.remove('show');
     }
 
-    //} 
-    console.log('this-' + this.classList + '-' + myDropdown.classList);
   });
 }
 clickDrop()
