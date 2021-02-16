@@ -79,12 +79,11 @@
 /**/
 .autor-img {
   padding: 0;
-  margin: 0;/*
-  margin-bottom: 30px;*/
-  margin-bottom: 37px;
-  width: 100%;/*
-  height: 470px;*/
-  object-fit: contain;
+  margin: 0;
+  margin-bottom: 37px;/*
+  width: 100%;/**/
+  height: 470px;/**/
+  object-fit: contain;/* cover;*/
 }
 .autor-name {
   margin-bottom: 8px;
@@ -114,12 +113,6 @@
   display: flex;
   justify-content: space-between;/*
   justify-content: space-around;*/
-}
-.accordeon-wrap {
-  width: 800px;
-  border-bottom: 1px solid var(--color-gray);
-  display: flex;
-  flex-direction: column;
 }
 .wrap-text {
   display: flex;

@@ -16,9 +16,9 @@
 .ui-accordion-header-active .ui-state-active {
 	outline: none;
 }
-.list-autors .ui-accordion-header .ui-corner-top .ui-state-default {*/
+.list-autors .ui-accordion-header .ui-corner-top .ui-state-default {
 .ui-accordion-header-collapsed .ui-corner-all {
- outline: none !important;
+ 	outline: none !important;
 	border: none !important;
 }
 .accordion .ui-accordion-header-icon {
@@ -32,13 +32,17 @@
 	background: url(/img/down.png) 50% 50% no-repeat;
 }
 .accordion .ui-accordion-header-active .ui-accordion-header-icon {
-	background-image: url(/img/up.png);
-}
-/* перенес из catalog */
-/* accordion 
-.accordion-text {
-  width: 33.33%;
+	background-image: url('../svg/c_down_h.svg'); url(/img/up.png);
 }*/
+/* перенес из catalog */
+
+.accordeon-wrap {
+  width: 800px;
+  border-bottom: 1px solid var(--color-gray);
+  display: flex;
+  flex-direction: column;
+}
+
 .ui-accordion-header {
   width: 100%;
   text-align: left;
@@ -67,16 +71,7 @@
 }
 .accordion-text-col {
   width: 33.33%;
-  padding-right: 50px;
-  /* 100%;
-  margin: 0;
-  display: flex;
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  line-height: 32px;
-  border: none;
-  border-bottom: 1px solid var(--color-gray);*/
+  padding-right: 40px;
 }
 .wrap-autor-link {
   color: var(--color-violet);
@@ -111,7 +106,7 @@
   color: #000 !important;
 }
 .period-life:active {
-  background-color: var(--color-bg) !important;
+  background-color: var(--color-bg);
 }
 .period-life:hover,
 .period-life:focus {
