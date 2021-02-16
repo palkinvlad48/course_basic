@@ -1,5 +1,4 @@
-/* переключает между скрытие и отображение раскрывающегося содержимого */
-let old = null
+/* удаляет drop */
 function deleteDrop() {
   window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
@@ -7,7 +6,7 @@ function deleteDrop() {
       const dropdowns = document.getElementsByClassName("dropdown-content");
       let i = 0
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
+        let openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
@@ -17,6 +16,9 @@ function deleteDrop() {
 }
 deleteDrop()
 /* */
+/* переключает между скрытием и отображением раскрывающегося содержимого */
+let old = null // создается клон объекта, если был клик 
+
 function clickDrop() {
   deleteDrop()
   $('.dropbtn').on('click', function (e) {

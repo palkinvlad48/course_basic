@@ -127,12 +127,9 @@
 .slide-num {
   position: absolute;
   display: block;
-  top: 39px;
-  left: 54px;/*
-  background-color: aqua;*/
+  top: 40px;
+  left: 42px;
   color: #cfcfcf;
-  
-  z-index: 2000;
 }
 .card-edition img {
   max-width: 350px;

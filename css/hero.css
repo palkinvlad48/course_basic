@@ -58,3 +58,6 @@
 .hero-body {
   width: 1080px;
 }
+.hero-body .content__desc {
+  margin-top: -4px;
+}

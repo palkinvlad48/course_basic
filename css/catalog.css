@@ -1,8 +1,9 @@
 .catalog {
-  margin-bottom: 60px;
+  padding-top: 20px;
+  margin-bottom: 78px;
 }
 .catalog-body {
-  margin-bottom: 36px;
+  margin-bottom: 0; /*36px;*/
   padding: 0;
 }
 .catalog-top {
@@ -50,14 +51,12 @@
 }
 .catalog-introduction {
   width: 1090px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-left: 0px;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 32px;
-  text-align: left;/*
-  margin-bottom: 30px;
-  margin-top: -10px;*/
+  text-align: left;
 }
 .catalog-footer {
   display: flex;
@@ -82,19 +81,13 @@
   padding: 0;
   margin: 0;/*
   margin-bottom: 30px;*/
-  margin-bottom: 34px;
-  width: 100%;
-  height: 470px;
+  margin-bottom: 37px;
+  width: 100%;/*
+  height: 470px;*/
   object-fit: contain;
 }
-.autor-name {/*
-  margin-bottom: 12px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  text-align: left;
-  letter-spacing: 0.014em;*/
-  margin-bottom: 18px;
+.autor-name {
+  margin-bottom: 8px;
   padding: 0; 
   padding-right: 20px;
   font-size: 24px;
@@ -103,16 +96,15 @@
   letter-spacing: 0.014em;
 }
 .autor-date {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   font-size: 12px;/*
-  line-height: 16px;
-  text-align: left;*/
   padding: 0; 
-  padding-right: 20px;
+  padding-right: 20px;*/
 }
 .autor-desc {
   padding: 0; 
   padding-right: 20px;
+  margin-top: -2px;
   font-size: 16px;
   line-height: 32px;
   text-align: left;
@@ -125,6 +117,7 @@
 }
 .accordeon-wrap {
   width: 800px;
+  border-bottom: 1px solid var(--color-gray);
   display: flex;
   flex-direction: column;
 }
@@ -136,152 +129,3 @@
   margin: 40px 40px 0 0px;
   display: inline-block;
 }
-
-/* accordion 
-.accordion-text {
-  width: 33.33%;
-}*/
-.ui-accordion-header {
-  width: 100%;
-  text-align: left;
-}
-/*  */
-.ui-accordion-header-icon,
-.ui-icon,
-.ui-icon-triangle-1-e {
-  fill: white;
-  color: white;
-}
-/* 1-й вариант
-.ui-icon, .ui-widget-content .ui-icon {
-    background: none !important;
-}  2-й вариант */
-.ui-icon {
-  width: 0;
-  height: 0 !important;
-}
-.list-autors {
-  padding: 39px 0 !important;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  background: var(--color-bg) !important;
-}
-.accordion-text-col {
-  width: 33.33%;
-  padding-right: 50px;
-  /* 100%;
-  margin: 0;
-  display: flex;
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  line-height: 32px;
-  border: none;
-  border-bottom: 1px solid var(--color-gray);*/
-}
-.wrap-autor-link {
-  color: var(--color-violet);
-  text-decoration: underline;
-}
-.ui-accordion-header-active,
-.ui-state-active {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-.period-life {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  width: 90%;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-  text-align: left;
-}
-.accordion-text-col a {
-  color: var(--color-violet);/*
-  text-decoration: underline;*/
-}
-.accordion-text-col a:hover {
-  color: var(--color-hover);
-}
-.ui-accordion-header-active,
-.ui-state-active {
-  background-color: var(--color-bg) !important;
-  color: #000 !important;
-}
-.period-life:active {
-  background-color: var(--color-bg) !important;
-}
-.period-life:hover,
-.period-life:focus {
-  color: var(--color-hover);
-}
-.circle {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0;
-  margin-left: auto;
-  background-image: url('../svg/c_down.svg');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  background-position: center;
-}/*
-.circle:hover {
-  background-image: url('../svg/c_down_h.svg'); 
-}
-.circle:active {
-  background-image: url('../svg/c_u.svg'); 
-}*/
-.circle-up:hover:active {
-  background-image: url('../svg/c_u.svg'); /* --color-acc-active: #7943A4 */
-}
-
-.circle-up {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0;
-  margin-left: auto;
-  background-image: url('../svg/c_u.svg');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  background-position: center;
-}
-.circle:active {
-  background-image: url('../svg/c_u.svg');/*
-  transform: translate(2px, 1px) rotate(180deg);*/
-}
-
-/*
-.question-text::after {
-  content: '';
-  display: flex;
-  position: relative;
-  width: 48px;
-  height: 48px;
-  max-height: 50px;
-  margin-right: 0;
-  margin-left: auto;
-  line-height: 100%;
-  justify-content: space-between;
-  vertical-align: middle;
-  background-image: url('../svg/circle.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* работает, когда сначала класс, потом элемент !!!
-.question-text:hover::after {
-  background-image: url('../svg/c_d.svg');
-}
-.question-text:active::after {
-  background: none;
-  transform: translate(2px, 1px) rotate(45deg);
-}
-*/
