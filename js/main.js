@@ -50,7 +50,7 @@ const setData = {
 }
 /* заготовка модального окна */
 function clickGalery() { //alert('yes')
-  const targ = document.querySelectorAll('.swiper-slide')
+  const targ = document.querySelectorAll('.future.swiper-slide')
   const valueG = document.getElementById('currG')
   console.log(valueG)
   targ.forEach((el) => {
@@ -65,8 +65,8 @@ function clickGalery() { //alert('yes')
       console.log(nameImg + 'beg-' + img + '-end -' + num)
       if (tarG.src.includes('_0') || setData.images[numInt].descr != undefined) {
 
-        //      console.log(nameImg + 'beg-' + img + '-end -' + num);
-        viewImg(nameImg, num)
+              console.log(nameImg + 'beg-' + img + '-end -' + num);
+      //  viewImg(nameImg, num)
       } else { alert('Описание картины не готово! ') }
     })
   })
@@ -127,7 +127,7 @@ initSelect()
 /* галерея */
 function initSwiper() {
 
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.galery-container', {
     slidesPerView: 3,
     slidesPerColumn: 2,
     slidesPerColumnFill: "row",// как заполнять слайд слайдами
@@ -160,11 +160,12 @@ function initSwiperEditions() {
   var mySwiperEditions = new Swiper('.editions-container', {
 
     slidesPerView: 3,
+    slidesPerColumn: 1,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },/*
+    },
     renderFraction: function (num_curr, num_all) {
       return '<span className="' + num_curr + '">(index + 1)</span>' +
         ' / ' +
@@ -174,7 +175,8 @@ function initSwiperEditions() {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: false,
-
+      currentClass: 'swiper-pagination-current',
+      totalClass: 'swiper-pagination-total',/*
       renderBullet: function (index, num_curr) {
         //   console.log('bullet-'+index)
         return '<span class="' + num_curr + '">' + (index + 1) + '</span>';
@@ -186,9 +188,13 @@ function initSwiperEditions() {
     },
 
   })
-
 }
 initSwiperEditions()
+
+/* заготовка
+paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
+
+*/
 /* заготовка */
 function clickSlide() {
   const targ = document.querySelectorAll('.editions-slide')
@@ -196,7 +202,7 @@ function clickSlide() {
   targ.forEach((el) => {
     el.addEventListener('click', function (e) {
       // e.stopPropagation()
-      const tarE = e.target
+      //const tarE = e.target
       let valSpan = tarE.parentNode.parentElement.ariaLabel
       console.log('1-' + valSpan)
       valueR.innerHTML = valSpan

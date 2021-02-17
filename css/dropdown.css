@@ -1,40 +1,32 @@
 .navbar {
-    overflow: hidden;/*
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar a {
-    float: left;*/
+    overflow: hidden;
     display: inline-flex;
-    width: 100%;/*
-    margin-right: 290px;*/
+    width: 100%;
     flex-direction: row;
-    font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 0px;
+    padding: 12px 0px;
     text-decoration: none;
 }
 .dropdown {
-    float: left;/*
-    display: flex;
-    flex-direction: row;*/
-    margin-right: 16px;
-    overflow: hidden;
-}
-.dropdown:last-child {
-    margin-right: 0;
+  position: relative;
+  float: left;/*
+  display: flex; так не получается 
+  flex-direction: row;*/
+  overflow: hidden;
+  margin-right: 0;
+  z-index: 20;
 }
 .dropdown .dropbtn {
     cursor: pointer;
-    font-size: 16px;    
+    font-size: 18px;    
     border: none;
     outline: none;
     color: white;
     padding: 14px 0px;
     background-color: inherit;
     font-family: inherit;
+    letter-spacing: 0.014em;
     margin: 0;
 }
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus { /*
@@ -57,6 +49,7 @@
   position: relative;/*
   top: 10px;*/
   padding: 10px;
+  z-index: 30;
 }
 .real-1,
 .real-2,
@@ -98,6 +91,8 @@
     width: 100%; /*220px;*/
     margin-left: -10px; 
     margin-top: -10px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
     text-decoration: none;
     display: inline-block;
     line-height: 40px;

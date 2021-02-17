@@ -101,7 +101,6 @@
                   <div class="dropdown-content-bg real-4">
                     <a class="dropdown-content-link" href="#">Тинторетто</a>
                   </div>
-
                 </div>
               </div>
               <div class="dropdown">
@@ -903,26 +902,31 @@
               <p class="price__title">Цена</p>
               <div class="price__range">
                 <span class="range-number">От</span>
-                <input class="price-input" name="min" type="number" placeholder="50">
+                <input class="price-input" name="min" type="number" placeholder="&nbsp;50">
                 <span class="range-number">до</span>
-                <input class="price-input" name="max" type="number" placeholder="25&nbsp;000">
+                <input class="price-input" name="max" type="number" placeholder="&nbsp;25&nbsp;000">
                 <span class="range-number">руб.</span>
               </div>
             </div>
           </div>
           <div class="editions__body-right">
             <div class="swiper-container editions-container">
-              <div class="slide-num"><span id="currE" class="swiper-pagination-current"></span></div>
+              <div class="slide-num">
+                <span id="currE" class="swiper-pagination-current"></span>
+                <div class="swiper-pagination-total">/3</div>
+              </div>
               <div class="swiper-button-next"></div>
+              <!--div class="swiper-pagination-current">1</div>
+              <div class="swiper-pagination-total">/3</div-->
               <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
+
               <div class="swiper-wrapper editions-wrapper" data-genre="">
                 <div class="swiper-slide editions-slide">
                   <div class="card-edition">
                     <img src="./img/book_art_color.jpg" alt="книга 1">
                     <div class="text-body">
                       <p class="edition-name">Искусство цвета</p>
-                      <span class="edition-span">620 руб.</span>
+                      <span class="edition-price">620 руб.</span>
                     </div>
                     <span class="edition-span">Иттен, Иоханнес</span>
                     <button class="btn-order">Заказать</button>
@@ -933,7 +937,7 @@
                     <img src="./img/book_typography.jpg" alt="книга 2">
                     <div class="text-body">
                       <p class="edition-name">Типографика</p>
-                      <span class="edition-span">2 450 руб.</span>
+                      <span class="edition-price">2 450 руб.</span>
                     </div>
                     <span class="edition-span">Рудер, Эмиль</span>
                     <button class="btn-order">Заказать</button>
@@ -945,7 +949,7 @@
                     <div class="text-body">
                       <p class="edition-name">Книга про буквы
                       </p>
-                      <span class="edition-span">2 200 руб.</span>
+                      <span class="edition-price">2 200 руб.</span>
                     </div>
                     <span class="edition-span">Гордон, Юрий</span>
                     <button class="btn-order">Заказать</button>
@@ -957,7 +961,7 @@
                     <div class="text-body">
                       <p class="edition-name">Николай Ильин
                       </p>
-                      <span class="edition-span">1 100 руб.</span>
+                      <span class="edition-price">1 100 руб.</span>
                     </div>
                     <span class="edition-span">Кричевский, Владимир</span>
                     <button class="btn-order">Заказать</button>
@@ -969,7 +973,7 @@
                     <div class="text-body">
                       <p class="edition-name">Модульные сетки в графическом дизайне
                       </p>
-                      <span class="edition-span">1 450 руб.</span>
+                      <span class="edition-price">1 450 руб.</span>
                     </div>
                     <span class="edition-span">Мюллер-Брокманн, Йозеф</span>
                     <button class="btn-order">Заказать</button>
@@ -981,7 +985,7 @@
                     <div class="text-body">
                       <p class="edition-name">Эволюция графических стилей
                       </p>
-                      <span class="edition-span">3 200 руб.</span>
+                      <span class="edition-price">3 200 руб.</span>
                     </div>
                     <span class="edition-span">Хеллер, Чваст</span>
                     <button class="btn-order">Заказать</button>
@@ -993,7 +997,7 @@
                     <div class="text-body">
                       <p class="edition-name">Искусство и визуальное восприятие
                       </p>
-                      <span class="edition-span">620 руб.</span>
+                      <span class="edition-price">620 руб.</span>
                     </div>
                     <span class="edition-span">Арнхейм, Рудольф</span>
                     <button class="btn-order">Заказать</button>

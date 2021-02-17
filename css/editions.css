@@ -79,18 +79,23 @@
   line-height: 32px;
 }
 .price__title {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .price__range {
-  width: 304px;
+  width: 274px;
+  height: 40px;
+  padding: 0;
   display: flex;
   border: 1px solid #fff;
 }
 .price-input {
-  width: 78px;
+  width: 76px;
   margin-left: 5px;
   margin-right: 5px;
   background-color: var(--color-violet);
+}
+.price-input:first-child {
+  width: 38px;
 }
 .price input::-webkit-input-placeholder { 
   color: #fff; 
@@ -99,10 +104,12 @@
   color: #fff; 
 }
 .range-number {
-  padding: 4px 8px 0;
+  padding: 10px 5px 0;
 }
 .editions__body-right {
   width: 1150px;
+  padding: 0;
+  margin: 0;
 }
 /* swiper */
 .editions-container {
@@ -110,11 +117,12 @@
   max-width: 1150px;
   height: 700px; 
   padding-top: 60px;
+  padding-left: 0;
 }
 .editions-wrapper {
   position: relative;
   height: 690px;
-  margin-top: 40px;
+  margin-top: 210px;
 }
 .editions-slide {
   height: 650px;
@@ -149,29 +157,55 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0px;
-}
-.edition-name,
+}/*
+.edition-name,*/
 .edition-span {
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
+  margin-bottom: 19px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 14px;
+}
+.edition-price {
+  margin-top: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;/*
+  line-height: 14px;
+  letter-spacing: 0em;*/
   color: #fff;
 }
 .edition-name {
-  width: 250px;   
+  width: 250px; 
+  margin-top: 5px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 700;  
+  line-height: 1.2;
 }
 .edition-span {
   font-weight: 400;
 }
 .btn-order {
-  width: 110px;
-  height: 32px;
+  width: 106px;
+  height: 35px;
   margin-left: 2px;
   border: 1px solid violet;
   border-radius: 1em;
   color: #fff;
   background: none;
+}
+/* */
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: 5px;
+  top: 72px;
+  right: auto;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  /*right: 10px;
+  left: auto;*/
+  left: 105px;
+  top: 72px;
+  right: auto;
 }

@@ -5,10 +5,11 @@
   }
 .galery-bg {
   width: 100%;/*
-  height: 100%; /*995px;*/
+  height: 995px;*/
   max-width: 1920px;
   background-image: url('../img/galery_fon.jpg');
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;/*
+  background-size: 1920px 995px;*/
   background-size: contain;
 }
 .galery-body {/*
