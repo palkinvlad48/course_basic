@@ -68,14 +68,19 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   background: var(--color-bg);
+  outline: none;
 }
 .accordion-text-col {
   width: 33.33%;
   padding-right: 40px;
+  font-size: 16px;
 }
 .wrap-autor-link {
   color: var(--color-violet);
-  text-decoration: underline;
+  text-decoration: none;
+}
+.wrap-autor-link:hover {
+  font-weight: 700;
 }
 .ui-accordion-header-active,
 .ui-state-active {
@@ -149,8 +154,13 @@
 .circle:active {
   background-image: url('../svg/c_u.svg');
   transform: translate(2px, 1px) rotate(180deg);
-}*/
-
+}*/ 
+.wrap-text {
+  padding: 24px 0 35px;
+}
+.wrap-text.ui-accordion-content-active {
+  border-top: 1px solid var(--color-acc-hover);
+}
 
 /* работает, когда сначала класс, потом элемент !!!
 .question-text:hover::after {

@@ -27,24 +27,22 @@
     #tab-btn-5:checked~#content-5 {
       display: block;
     }
-
+    /* окружность вокруг флага*/
     .tabs>label {
-      height: 60px;
-      width: 66px;
+      height: 62px;
+      width: 62px;
       display: inline-block;
       text-align: center;
       vertical-align: middle;
-      user-select: none;
-      background-color: var(--color-gray);
-      border: 1px solid #e0e0e0;
+      user-select: none;/*
+      background-color: var(--color-gray);*/
+      border: none; 
       border-radius: 50%;
-      padding: 0px 7px;
-      font-size: 16px;
-      line-height: 1;
+      padding: 0px 6px;
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-      cursor: pointer;
+      cursor: pointer;/*
       position: relative;
-      top: -10px;
+      top: 0px;*/
     }
 
     .tabs>label:not(:first-of-type) {/*
@@ -52,7 +50,6 @@
       margin-left: 30px;
     }
 
-    .tabs>input[type="radio"]:checked+label {
-      background-color: var(--color-gray);
-      border: 1px solid var(--color-violet);
+    .tabs>input[type="radio"]:checked + label {
+      border: 2px solid var(--color-violet);
     }

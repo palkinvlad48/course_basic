@@ -23,8 +23,7 @@
   font-weight: 700;
   src: local('Open Sans'),
        url('../fonts/open-sans-v18-latin_cyrillic-700.woff2') format('woff2'), 
-       url('../fonts/open-sans-v18-latin_cyrillic-700.woff') format('woff'); 
-       
+       url('../fonts/open-sans-v18-latin_cyrillic-700.woff') format('woff');       
 }
 /**/
 html {
@@ -50,7 +49,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
 html,
 body {
   min-width: 320px; 

@@ -1,14 +1,16 @@
 //$(document).ready(function () {
-let nameAutor = "123"
+let nameAutor, nameImg = ""
 const setData = {
   images: [{},
   {
+    src: '',
     name: 'Без названия',
     autor: "Кандинский Василий",
     date: "1922-1924",
     descr: "Картина написана в 1922 г. ...",
   },
   {
+    src: 'realism_022.jpg',
     name: '"Женщина с граблями"',
     autor: "Казимир Малевич ",
     date: "1931-1932",
@@ -16,30 +18,35 @@ const setData = {
   }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
   {}, {}, {},
   {
+    src: 'realism_028.jpg',
     name: 'Незнакомка',
     autor: "Крамской Иван Николаевич",
     date: "1931-1932",
     descr: 'Картина "Незнакомка" написана в 18... г.<br>На ней он запечатлел....',
   },
   {
+    src: '',
     name: 'Незнакомка',
     autor: "Крамской Иван Николаевич",
     date: "1931-1932",
     descr: "Картина 'Незнакомка' написана в 18... г.<br>В ней он запечатлел....",
   }, {}, {}, {},
   {
+    src: '',
     name: 'Портрет Ге',
     autor: "Неизвестен",
     date: "1980...",
     descr: "Портрет русского живописца Ге....",
   },
   {
+    src: '',
     name: 'Портрет Крамского Ивана Николаевича',
     autor: "С фото",
     date: "1980...",
     descr: "Портрет русского живописца Крамского Ивана Николаевича....",
   }, {},
   {
+    src: '',
     name: 'Картина Радостная Структура',
     autor: "Кандинский Василий ",
     date: "1980...",
@@ -49,8 +56,9 @@ const setData = {
   ],
 }
 /* заготовка модального окна */
-function clickGalery() { //alert('yes')
-  const targ = document.querySelectorAll('.future.swiper-slide')
+function clickGalery() {
+
+  const targ = document.querySelectorAll('.future .swiper-slide')
   const valueG = document.getElementById('currG')
   console.log(valueG)
   targ.forEach((el) => {
@@ -65,30 +73,40 @@ function clickGalery() { //alert('yes')
       console.log(nameImg + 'beg-' + img + '-end -' + num)
       if (tarG.src.includes('_0') || setData.images[numInt].descr != undefined) {
 
-              console.log(nameImg + 'beg-' + img + '-end -' + num);
-      //  viewImg(nameImg, num)
+        console.log(nameImg + 'beg-' + img + '-end -' + num);
+        viewImg(nameImg, num)
       } else { alert('Описание картины не готово! ') }
     })
-  })
+  })/**/
 
   function viewImg(name, num) {
-    console.log(name)
+    
+    nameImg = name
     const objectV = document.getElementById('imgV')
     // .toggle('modal-window')
     objectV.classList.remove('img-hide')
     objectV.classList.add('modal-window')
     //$('#modal').css({"left": "0;"})
     let numInt = parseInt(num)
-
-    objectV.innerHTML = "<img class='modal-img' src='./img/" + name + "'>" +
-      "<div style='background-color:#fff; padding:20px'>" +
-      "<div class='autor-name'>" + setData.images[numInt].name + "</div>" +
-      "<div class='autor-date'>" + setData.images[numInt].date + "</div>" +
-      "<div class='autor-descr'>" + setData.images[numInt].descr + "</div>" +
-      "</div>";
-    $('#imgV').css({ 'left': '500px' })
+    //console.log('view-' + objectV.classList)setData.images[numInt].src
+    console.log(nameImg)
+    objectV.innerHTML = `
+    
+    <img class='modal-img' src='../img/${nameImg}'>
+  
+    <div class='autor-card'>   
+    <div class='autor-name'> ${setData.images[numInt].name} </div>
+    <div class='autor-date'> ${setData.images[numInt].date} </div>
+    <div class='autor-descr'> ${setData.images[numInt].descr}</div>
+    </div>
+    `;
+/* */
+    $('#imgV').css({ 
+      'left': '10px',
+      'top': '10px' 
+      })
     //$('#modal').css({ 'left': '0px' })
-
+    //console.log('view-' + objectV.innerHTML)
   }
 }
 clickGalery()

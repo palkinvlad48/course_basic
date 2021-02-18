@@ -15,19 +15,28 @@
   transition: 0.3s;
 }
 .modal-window {
-  width: 900px;
+  position: fixed;/* absolute;*/
+  top: 0;
+  left: 0;
+  width: 900px;/*
+  display: */
+  padding: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background: #fff;
+  border: 2px solid var(--color-violet);
+  z-index: 40;
 }
-.modal-img {
-  width: 40%;
+.modal-img {/*
+  float: left;/**/
+  width: 48%;
   height: 100%;
   object-fit: cover;
-
 } 
 .autor-card {/*
-  width: 50%;
+  float: right;/**/
+  width: 48%;/*
   max-width: 750px;*/
   margin: 10px;
   display: flex;
