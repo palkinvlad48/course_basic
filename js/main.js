@@ -14,7 +14,7 @@ const setData = {
     name: '"Женщина с граблями"',
     autor: "Казимир Малевич ",
     date: "1931-1932",
-    descr: "Картина из второй серии крестьянского цикла работ автора. К.Малевич принялся за ее создание в 1930-1931 годах, после того, как 1-й цикл был утерян после Берлинской и Варшавской выставок в 1927 году.",
+    descr: "Картина из второй серии крестьянского цикла работ автора. К.Малевич принялся за ее создание в 1930-1931 годах, после того, как<br> 1-й цикл был утерян после Берлинской и Варшавской выставок в 1927 году.",
   }, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},
   {}, {}, {},
   {
@@ -47,12 +47,18 @@ const setData = {
   }, {},
   {
     src: '',
-    name: 'Картина Радостная Структура',
+    name: '"Радостная Структура"',
     autor: "Кандинский Василий ",
     date: "1980...",
     descr: "Какие треугольники и пилы! Веселых ярких красок перелив из звездных блесток, нот цветов и пыли, в картине художника Кандинского Василия слышен радостный мотив ...",
   },
-  {}, {},
+  {
+    src: '',
+    name: '"Истина"',
+    autor: "Ге Никола́й",
+    date: "1980...",
+    descr: "Картина изображает..."
+  }, {},
   ],
 }
 /* заготовка модального окна */
@@ -70,17 +76,17 @@ function clickGalery() {
       let nameImg = tarG.src.slice(img)
       let num = nameImg.slice(-7, -4)
       let numInt = parseInt(num)
-      console.log(nameImg + 'beg-' + img + '-end -' + num)
-      if (tarG.src.includes('_0') || setData.images[numInt].descr != undefined) {
+      //console.log(nameImg + 'beg-' + img + '-end -' + num)
+      // if (tarG.src.includes('_0') || setData.images[numInt].descr === undefined) {
 
-        console.log(nameImg + 'beg-' + img + '-end -' + num);
-        viewImg(nameImg, num)
-      } else { alert('Описание картины не готово! ') }
+      //  console.log(nameImg + 'beg-' + img + '-end -' + num);
+      viewImg(nameImg, num)
+      //} else { alert('Описание картины не готово! ') }
     })
   })/**/
 
   function viewImg(name, num) {
-    
+
     nameImg = name
     const objectV = document.getElementById('imgV')
     // .toggle('modal-window')
@@ -94,22 +100,29 @@ function clickGalery() {
     
     <img class='modal-img' src='../img/${nameImg}'>
   
-    <div class='autor-card'>   
-    <div class='autor-name'> ${setData.images[numInt].name} </div>
+    <div class='autor-card'><a class='icon-delete' id='imgDelete'></a>   
+    <div class='autor-name'> ${setData.images[numInt].autor} </div>
+    <div class='img-name'> ${setData.images[numInt].name} </div>
     <div class='autor-date'> ${setData.images[numInt].date} </div>
-    <div class='autor-descr'> ${setData.images[numInt].descr}</div>
+    <div class='autor-desc'> ${setData.images[numInt].descr}</div>
     </div>
     `;
-/* */
-    $('#imgV').css({ 
+    /* */
+    $('#imgV').css({
       'left': '10px',
-      'top': '10px' 
-      })
-    //$('#modal').css({ 'left': '0px' })
-    //console.log('view-' + objectV.innerHTML)
+      'top': '100px'
+    })
+    
+    objectV.addEventListener('click', () => {
+      // console.log('del')
+      objectV.classList.add('img-hide')
+      objectV.classList.remove('modal-window')
+    })
+  
   }
 }
 clickGalery()
+
 /* Italia */
 function initAccItalia() {
   $("#accordion_1").accordion({

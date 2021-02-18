@@ -18,32 +18,65 @@
   position: fixed;/* absolute;*/
   top: 0;
   left: 0;
+  height: 500px;
   width: 900px;/*
   display: */
-  padding: 5px;
+  padding: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #fff;
-  border: 2px solid var(--color-violet);
+  background: #fff;/*
+  border: 2px solid var(--color-violet);*/
   z-index: 40;
 }
+.icon-delete:after {
+  position: absolute;
+  content: '\2716';
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+  color: #000;
+  cursor: pointer;
+}/* ×
+.icon-delete {
+  position: absolute;
+  content: '00D7'; 
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  right: 10px;
+  top: 10px;
+
+}*/
 .modal-img {/*
   float: left;/**/
   width: 48%;
   height: 100%;
   object-fit: cover;
 } 
-.autor-card {/*
-  float: right;/**/
-  width: 48%;/*
-  max-width: 750px;*/
-  margin: 10px;
+.autor-card {
+  width: 48%;
+  margin: 10px 20px 20px 60px;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg);
+}
+.autor-name {
+  margin-top: 110px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+.img-name {/*
+  margin-top: 20px;*/
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
 }
 
+.autor-desc {
+  margin-top: 40px;
+}
 .modal-img-descr {
   padding: 20px;
   display: flex;
