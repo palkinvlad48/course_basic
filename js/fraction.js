@@ -1,24 +1,37 @@
+/* Из swiper */
 pagination: {
   el: '.swiper-pagination',
     clickable: true,
       dynamicBullets: false,
         currentClass: 'swiper-pagination-current',
-          totalClass: 'swiper-pagination-total',/*
+          totalClass: 'swiper-pagination-total',
       renderBullet: function (index, num_curr) {
         //   console.log('bullet-'+index)
         return '<span class="' + num_curr + '">' + (index + 1) + '</span>';
         //return '<span class="' + num_curr + '"></span>';
       },/**/
     },
-
+/* Еще */
 
 if (params.type === 'fraction') {
   $el.find("." + params.currentClass).text(params.formatFractionCurrent(current + 1));
   $el.find("." + params.totalClass).text(params.formatFractionTotal(total));
 }
+//
+if (params.type === 'fraction') {
+  if (params.renderFraction) {
+    paginationHTML = params.renderFraction.call(swiper, params.currentClass, params.totalClass);
+  } else {
+    paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
+  }
+
+  $el.html(paginationHTML);
+}
+//
+
 
 /* */
-Это может быть объект, за которым я хочу наблюдать:
+// Это может быть объект, за которым я хочу наблюдать:
 
 const store = {
   anArray =[
@@ -28,12 +41,12 @@ const store = {
     'is'
   ]
 }
-  ..и это функция, которая изменяет storeобъект:
+//  ..и это функция, которая изменяет storeобъект:
 
     function addAName() {
       store.anArray.push('Bob')
     }
-Моя цель в этом примере - запускать следующую функцию каждый раз, когда storeобъект изменяется.
+// Моя цель в этом примере - запускать следующую функцию каждый раз, когда store-объект изменяется.
 
 function storeChanged() {
   console.log('The store object has changed!')
@@ -49,7 +62,8 @@ let store = new Proxy({}, validator);
 store.a = 'hello';
 // console => The property a has been updated with hello
 /* */
-Сегодня вы можете использовать объект Proxy для отслеживания(и перехвата) изменений, внесенных в объект.Он специально создан для того, что пытается сделать OP.Вот простой пример:
+// Сегодня вы можете использовать объект Proxy для отслеживания(и перехвата) изменений, внесенных в объект.
+// Он специально создан для того, что пытается сделать OP.Вот простой пример:
 
 var targetObj = {};
 var targetProxy = new Proxy(targetObj, {
@@ -75,7 +89,7 @@ p.testing.blah = 42;
 // console:  [{"type":"add","target":{"blah":42},"property":"blah","newValue":42,"currentPath":"testing.blah",jsonPointer:"/testing/blah","proxy":{"blah":42}}]
 
 /* */
-Во - первых, используйте сеттеры и геттеры, например:
+// Во - первых, используйте сеттеры и геттеры, например:
 
 var myobj = { a: 1 };
 
@@ -96,7 +110,7 @@ function create_gets_sets(obj) { // make this a framework/global function
 }
 
 create_gets_sets(myobj);
-тогда вы можете сделать что - то вроде:
+// тогда вы можете сделать что - то вроде:
 
 function listen_to(obj, prop, handler) {
   var current_setter = obj["set_" + prop];
@@ -104,13 +118,13 @@ function listen_to(obj, prop, handler) {
   obj["set_" + prop] = function (val) {
     current_setter.apply(obj, [old_val, val]); handler(val));
   }
-затем установите слушателя как:
+// затем установите слушателя как:
 
 listen_to(myobj, "a", function (oldval, newval) {
   alert("old : " + oldval + " new : " + newval);
 }
 /* */
-Использование Prototype: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+// Использование Prototype: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
   // Console
   function print(t) {

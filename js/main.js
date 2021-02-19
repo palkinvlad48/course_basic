@@ -97,9 +97,7 @@ function clickGalery() {
     //console.log('view-' + objectV.classList)setData.images[numInt].src
     console.log(nameImg)
     objectV.innerHTML = `
-    
     <img class='modal-img' src='../img/${nameImg}'>
-  
     <div class='autor-card'><a class='icon-delete' id='imgDelete'></a>   
     <div class='autor-name'> ${setData.images[numInt].autor} </div>
     <div class='img-name'> ${setData.images[numInt].name} </div>
@@ -169,11 +167,11 @@ function initSwiper() {
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: false,
-      clickable: true,/*
-      renderBullet: function (index, className) {
+      clickable: true,
+      renderBullet: function (index, slideNum) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
-        return '<span class="' + className + '"></span>';
-      },*/
+        //return '<span class="' + className + '"></span>';
+      },/* prob */
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -199,8 +197,7 @@ function initSwiperEditions() {
     },
     renderFraction: function (num_curr, num_all) {
       return '<span className="' + num_curr + '">(index + 1)</span>' +
-        ' / ' +
-        '<span className="' + num_all + '"></span>';
+        ' / ' +  '<span className="' + num_all + '"></span>';
     },/**/
     pagination: {
       el: '.swiper-pagination',
@@ -226,14 +223,14 @@ initSwiperEditions()
 paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
 
 */
-/* заготовка */
+/* editions: по клику - текущий сайд / общее число */
 function clickSlide() {
   const targ = document.querySelectorAll('.editions-slide')
   const valueR = document.getElementById('currE')
   targ.forEach((el) => {
     el.addEventListener('click', function (e) {
       // e.stopPropagation()
-      //const tarE = e.target
+      const tarE = e.target
       let valSpan = tarE.parentNode.parentElement.ariaLabel
       console.log('1-' + valSpan)
       valueR.innerHTML = valSpan

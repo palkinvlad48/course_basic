@@ -245,7 +245,7 @@ choices__item
   color:#fff;
   background: var(--color-orange); 
 }
-.galery-container .slide-num {
+.galery-container .slideNum {
   position: absolute;
   display: block;
   top: 33px;

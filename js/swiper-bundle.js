@@ -8163,7 +8163,7 @@
       if (params.itemRoleDescriptionMessage) {
         swiper.a11y.addElRoleDescription($(swiper.slides), params.itemRoleDescriptionMessage);
       }
-
+      //alert('Sdec')
       swiper.a11y.addElRole($(swiper.slides), 'group');
       swiper.slides.each(function (slideEl) {
         var $slideEl = $(slideEl);
