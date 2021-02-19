@@ -61,20 +61,19 @@
   display: flex;
   flex-direction: column;
 }
-.autor-name {
+.autor-card .autor-name {
   margin-top: 110px;
   margin-bottom: 10px;
   font-weight: 700;
   line-height: 1;
 }
-.img-name {/*
+.autor-card .img-name {/*
   margin-top: 20px;*/
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
 }
-
-.autor-desc {
+.autor-card .autor-desc {
   margin-top: 40px;
 }
 .modal-img-descr {
