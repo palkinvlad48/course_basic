@@ -119,7 +119,7 @@ function clickGalery() {
   
   }
 }
-clickGalery()
+//clickGalery()
 
 /* Italia */
 function initAccItalia() {
@@ -240,44 +240,6 @@ function clickSlide() {
 }
 clickSlide()
 
-/* заготовка модального окна 
-function clickGalery() {
-  const targ = document.querySelectorAll('.swiper-slide')
-  const valueG = document.getElementById('currG')
-  //console.log(valueG.parentElement + '-' + targ.ariaLabel)
-  valueG.innerHTML = targ.ariaLabel
-
-  targ.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      const tarG = e.target
-      let valSpan = tarG.parentElement.ariaLabel
-      valueG.innerHTML = valSpan
-      let img = tarG.src.indexOf('img/')
-      let nameImg = tarG.src.slice(img + 4)
-      let num = nameImg.slice(-5, -4)
-      console.log('beg-' + num + '-end')
-      viewImg(nameImg, num)
-    })
-  })
-  
-  function viewImg(name, num) {
-    console.log(name)
-    const objectV = document.getElementById('imgV')
-    //$('#imgV').classList.add('modal-window') //toggle('modal-window')
-    objectV.classList.remove('img-hide')
-    objectV.classList.add('modal-window')
-    //$('#imgV')
-    objectV.innerHTML = "<img src='./img/" + name + "'>" +
-      "<div style='color: #fff;'>" + descr[num] + "</div>";
-    $('#imgV').css({ 'left': '500px' })
-    //objectV.nextSibling.src = './img/' + name + '>';
-    console.log('Yes: ' + name + '-' + objectV.classList)
-    //const ob = objectV.parentNode.appendChild('img')
-    //objectV.innerHTML = "<img class='.img-proba' src=" + "./img/"+ name +">";
-    //console.log(objectV.innerHTML)
-  }
-}
-clickGalery() */
 /* вывод номера текущего слайда */
 function initGalery() {
   const targ = document.querySelector('.swiper-slide-active') //.swiper-slide')
@@ -293,8 +255,8 @@ function initSwiperPartners() {
     slidesPerView: 3,
     loop: true,
     centerSlides: true,
-    /*  direction: 'horizontal',
-    height: '240px',*/
+    direction: 'horizontal',
+    height: '240px',/* ??? */
     autoHeight: false,
     slideClass: 'partners-slide',/**/
     slideNextClass: 'slide-next',

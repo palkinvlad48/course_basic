@@ -17,7 +17,7 @@
 .modal-window {
   position: fixed;/* absolute;*/
   top: 0;
-  left: 0;
+  left: -600px;
   height: 500px;
   width: 900px;/*
   display: */
@@ -27,6 +27,7 @@
   justify-content: space-between;
   background: #fff;/*
   border: 2px solid var(--color-violet);*/
+  transition: left 0.7s ease-in-out;
   z-index: 40;
 }
 .icon-delete:after {

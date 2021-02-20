@@ -38,7 +38,7 @@ html {
   --color-danger: red;
   --color-gray: #333;   
   --color-bg: #E5E5E5;
-
+  --position-x: 625px;
   --delta-y: 60px;/*
   --name-tab-1: 'domeniko';
   --name-tab-2: 'kramskoy';
@@ -64,22 +64,23 @@ body {
   color: var(--color-gray);
   line-height: 1;
 }
-
 button,
 input {
   font: inherit;
 }
-
 img {
   max-width: 100%;
   width: 100%;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-header a:hover,
+a:hover,
+a:focus {
+  outline: none;
+}
+/*header a:hover,*/
 .dropdown-content-bg:hover,
 .genre__select:hover {
  transition: color 0.4s ease-in-out;
@@ -87,10 +88,9 @@ header a:hover,
 .dropdown-content-bg:active {
  transition: color 0.7s ease-in-out;
 }
-
-a:hover,
-a:focus {
-  outline: none;
+/* ??? */
+.modal-window {
+  transition: left 0.7s ease-in-out;
 }
 
 button {
