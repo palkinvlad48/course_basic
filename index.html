@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="./css/normalize.css">
 
-  <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <!--link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-600.woff" as="font" type="font/woff" crossorigin>
@@ -78,17 +78,16 @@
               </li>
             </ul>
           </nav>
-          <a class="btn-head menu-head__item-link" href="#form">Войти</a>
+          <a class="btn-head" href="#form">Войти</a>
         </div>
       </div>
     </div>
     <div class="menu-genre">
-    </div>
-    <div class="container container-head">
-      <div class="wrap-menu">
-        <div class="menu-body">
 
-          <nav class="navbar">
+      <div class="container container-head">
+        <nav class="wrap-menu">
+
+          <ul class="navbar">
             <div class="dropdown">
               <button class="dropbtn genre__select" data-id="1">Реализм
               </button>
@@ -179,15 +178,15 @@
                 </div>
               </div>
             </div>
-          </nav>
-        </div>
-        <div class="search-body">
-          <a class="btn-search">Поиск по сайту</a>
-          <div class="line-search"></div>
-        </div>
+          </ul>
+          <div class="search-body">
+            <button class="btn-search"></button>
+            <input class="search-input" type="text" placeholder="Поиск по сайту">
+          </div>
+        </nav>
       </div>
-
     </div>
+    
   </header>
   <main class="main">
     <section class="hero" id="about-us">
@@ -1163,34 +1162,33 @@
         });*/
 
     targ = document.querySelectorAll('.future .swiper-slide')
-
+    let tr = true
     targ.forEach((el) => {
-
-      el.addEventListener('mouseover', function (e) {
-        //e.stopPropagation()
-        const tarh = e.target
-        let top = 0,
-          left = 0
-        let xx = getCoords(tarh)
-        let dY = 0
-        let topM = pageYOffset // $(tarh).offset().top
-        let topG = $('#galery').offset().top;
-        //console.log('topm - ' + topM + ' topg -' + topG + ' xx - ' + xx.top)
-        dY = topM - topG + 30;
-        $(".galery-hover").css({
-          "left": xx.left + 30,
-          "top": xx.top + dY //,   115       "transition": "left duration 0.7s ease-in-out"
-          // не срабатывает !??
+      if (tr) {
+        el.addEventListener('mouseover', function (e) {
+          //e.stopPropagation()
+          const tarh = e.target
+          let top = 0,
+            left = 0
+          let xx = getCoords(tarh)
+          let dY = 0
+          let topM = pageYOffset
+          let topG = $('#galery').offset().top;
+          //console.log('topm - ' + topM + ' topg -' + topG + ' xx - ' + xx.top)
+          dY = topM - topG + 30;
+          $(".galery-hover").css({
+            "left": xx.left + 30,
+            "top": xx.top + dY
+          })
+          tr = false
+          el.addEventListener('click', clickGalery)
+          return false
         })
-
-        el.addEventListener('click', clickGalery)
-        //return
-      })
+      }
       el.addEventListener('mouseout', function (e) {
         $(".galery-hover").css({
           "left": - 630
         })
-        console.log('out-')
       })/**/
     })
 
@@ -1203,11 +1201,11 @@
     }
 
     const hovact = document.querySelector(".galery-hover")
-    hovact.addEventListener('click', function () { 
-      clickGalery()
+    hovact.addEventListener('click', function () {
+      // clickGalery()
       $(".galery-hover").css({
         "left": - 630
-      })/* не срабатывает !?? или причина в дрожании ховера ? */
+      })/* не всегда срабатывает !? причина в дрожании ховера ??? */
     })
 
   </script>

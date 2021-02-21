@@ -6,13 +6,11 @@
   }
 }
 @media all and (hover) {
-/* and (.btn-search:hover) {*/
-  .btn-search:hover::before {
-    content: url('../svg/search_v.svg');
-    width: 14px;
-    height: 14px;  
+
+  .btn-search:hover {
+    background-image: url('../svg/search_v.svg');
   }
-  .line-search:hover {
-    border-color: var(--color-hover);
+  .search-input:hover { 
+    border-bottom: 1px solid var(--color-hover);
   }
 }

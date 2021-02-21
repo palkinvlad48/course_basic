@@ -37,7 +37,7 @@ html {
   --color-violet: #9D5CD0;
   --color-danger: red;
   --color-gray: #333;   
-  --color-bg: #E5E5E5;
+  --color-bg: #fff; /*E5E5E5;*/
   --position-x: 625px;
   --delta-y: 60px;/*
   --name-tab-1: 'domeniko';
@@ -53,7 +53,7 @@ html,
 body {
   min-width: 320px; 
   margin: 0;
-  background-color: var(--color-bg);
+  background-color: #fff; /*var(--color-bg);*/
   font-family: 'Open Sans', Arial, sans-serif;  
   font-size: 18px;
   font-style: normal;
@@ -141,4 +141,15 @@ p {
   letter-spacing: 0em;
   text-align: left;
 }
-/* по умолчанию*/
+::-webkit-input-placeholder { /* WebKit browsers */
+   color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
