@@ -1161,35 +1161,35 @@
         });*/
 
     targ = document.querySelectorAll('.future .swiper-slide')
-    let tr = true
-    targ.forEach((el) => {
-      if (tr) {
-        el.addEventListener('mouseover', function (e) {
-          //e.stopPropagation()
-          const tarh = e.target
-          let top = 0,
-            left = 0
-          let xx = getCoords(tarh)
-          let dY = 0
-          let topM = pageYOffset
-          let topG = $('#galery').offset().top;
-          //console.log('topm - ' + topM + ' topg -' + topG + ' xx - ' + xx.top)
-          dY = topM - topG + 30;
-          $(".galery-hover").css({
-            "left": xx.left + 30,
-            "top": xx.top + dY
-          })
-          tr = false
-          el.addEventListener('click', clickGalery)
-          return false
+    let tr = false
+    //targ.forEach((el) => 
+    for (let i = 0; i < targ.length; i++) {
+
+      targ[i].addEventListener('mouseover', function (e) {
+        //e.stopPropagation()
+        const tarh = e.target
+        let top = 0,
+          left = 0
+        let xx = getCoords(tarh)
+        let dY = 0
+        let topM = pageYOffset
+        let topG = $('#galery').offset().top;
+        //console.log('topm - ' + topM + ' topg -' + topG + ' xx - ' + xx.top)
+        dY = topM - topG + 30;
+        $(".galery-hover").css({
+          "left": xx.left + 30,
+          "top": xx.top + dY
         })
-      }
-      el.addEventListener('mouseout', function (e) {
+        targ[i].addEventListener('click', clickGalery)
+        tr = true
+      })
+      targ[i].addEventListener('mouseout', function (e) {
         $(".galery-hover").css({
           "left": - 630
         })
       })/**/
-    })
+      if (tr) { break }
+    }
 
     function getCoords(elem) {
       var box = elem.getBoundingClientRect();
