@@ -6,11 +6,13 @@
   }
 }
 @media all and (hover) {
-
+ /* .search-body:hover {*/
+    
   .btn-search:hover {
     background-image: url('../svg/search_v.svg');
   }
   .search-input:hover { 
     border-bottom: 1px solid var(--color-hover);
   }
+/* для 2-х не работает */
 }
