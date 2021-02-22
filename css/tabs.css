@@ -13,10 +13,10 @@
 /**/
     .tabs >div {
       /* скрыть контент по умолчанию */
-      display: none;
-      border: 1px solid #e0e0e0;
-      padding: 0px 0; /*15px;*/
-      font-size: 16px;
+      display: none;/*
+      border: 1px solid #e0e0e0;*/
+      padding: 0; /*
+      font-size: 16px;*/
     }
 
     /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */

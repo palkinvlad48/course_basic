@@ -1,20 +1,19 @@
 .hero {
   margin-top: 100px;/*
   height: 800px;/**/
-  background-image: url('../img/birmingham_MK_98_2.jpg');
+  background-image: url('../img/birmingham_unsplash_2.jpg');/
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
   padding-bottom: 0px;
 }
-.img-content {/*
-  position: absolute;*/
+.img-content {
   position: relative;
   padding-top: 139px;
   padding-bottom: 26px;
-  padding-right: 80px;/**/
+  padding-right: 80px;
   margin-bottom: 120px;
-  width: 40%; /*550px;*/
+  width: 40%; 
   color: #fff;
   z-index: 2;
 }
@@ -26,8 +25,7 @@
   line-height: 83px;
   letter-spacing: 0em;
   text-align: left;
-  position: relative;/*
-  z-index: 1;*/
+  position: relative;
 }
 .img-content__desc {
   width: 100%;

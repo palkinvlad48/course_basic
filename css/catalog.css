@@ -11,8 +11,8 @@
   justify-content: start;
 }
 .catalog-top__flags {
-  width: 476px;
-  height: 60px;
+  width: 476px;/*
+  height: 60px;*/
   display: flex;
   justify-content: space-around;
 }

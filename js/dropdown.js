@@ -28,21 +28,12 @@ function clickDrop() {
 
     if (old) {
       old.classList.remove('show');
-    } //else { deleteDrop() }
+    } 
 
     let myDropdown = document.getElementById(dropId);
  
-    // e.target.matches - соответствует ли элемент указанному css-селектору
-    // работает с 1-го раза, но не убирает
-
-    if (!this.classList.contains('show')) {
-      // this.classList.contains('show') - является ли узел потомком данного узла,
-      //работает со 2-го раза
-      myDropdown.classList.add("show")
-      old = myDropdown
-    } else {
-      myDropdown.classList.remove('show');
-    }
+    myDropdown.classList.add("show")
+    old = myDropdown
 
   });
 }
