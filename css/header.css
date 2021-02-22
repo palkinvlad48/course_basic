@@ -63,12 +63,6 @@
 }
 .btn-head:hover::before {
   content: url('../svg/common_hover.svg');
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  left: -20px;
-  top: 0;
-  margin-right: 20px;
 }
 .menu-head__item:not(:last-child) {
   padding: 2px 0;
@@ -80,10 +74,10 @@
 .menu-genre { /*
   position: absolute;
   top: 100px;
-  left: 0;*/
-  width: 100%;/* без высоты ломается верстка
+  left: 0;/**/
+  width: 100%;/* без высоты ломается верстка*
   height: 70px; /* надо transform для выпадашек !!! */
-  padding: 0;
+  padding-bottom: 12px;
   background: rgba(0,0,0,0.4);
 }
 .wrap-menu {

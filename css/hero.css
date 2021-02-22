@@ -1,11 +1,21 @@
 .hero {
   margin-top: 100px;/*
   height: 800px;/**/
-  background-image: url('../img/birmingham_unsplash_2.jpg');/
+  width: 100%;
+  background-image: url('../img/birmingham_unsplash_2.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
-  padding-bottom: 0px;
+  padding: 0px;
+  z-index: 1;
+  animation: scaling 8s linear 2;
+}
+@keyframes scaling {
+  0%   { background-size: 100%; } 
+  25%  { background-size: 96%; }
+  50%  { background-size: 85%; }
+  75% { background-size: 96%; }
+  100% { background-size: 100%; }
 }
 .img-content {
   position: relative;
@@ -15,7 +25,7 @@
   margin-bottom: 120px;
   width: 40%; 
   color: #fff;
-  z-index: 2;
+  z-index: 1;
 }
 .img-content__title {
   width: 100%;

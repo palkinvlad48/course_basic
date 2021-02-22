@@ -53,7 +53,7 @@ function getCoords(elem) {
 
 const hovact = document.querySelector(".galery-hover")
 hovact.addEventListener('click', function () {
-  // clickGalery()
+  clickGalery()
   $(".galery-hover").css({
     "left": - 630
   })/* не всегда срабатывает !? причина в дрожании ховера ??? */

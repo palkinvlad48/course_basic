@@ -2,9 +2,10 @@
 function deleteDrop() {
   window.onclick = function (event) {
     if (!event.target.matches('.dropbtn') || (dubl > 1)) {
-      if (dubl > 1) {
+    //  if (dubl > 1) {
         dubl = 0
-      }
+      //}
+      console.log('del-' + dubl)
       const dropdowns = document.getElementsByClassName("dropdown-content");
       let i = 0
       for (i = 0; i < dropdowns.length; i++) {
@@ -21,6 +22,7 @@ deleteDrop()
 /* переключает между скрытием и отображением раскрывающегося содержимого */
 let old = null // создается клон объекта, если был клик 
 let dubl = 0
+
 function clickDrop() {
   deleteDrop()
   $('.dropbtn').on('click', function (e) {
@@ -30,13 +32,13 @@ function clickDrop() {
     dubl++
     if (old) {
       old.classList.remove('show')
-    }
+    }   
 
     let myDropdown = document.getElementById(dropId);
 
     myDropdown.classList.add("show")
     old = myDropdown
-
+    console.log(dubl)
   });
 }
 clickDrop()
