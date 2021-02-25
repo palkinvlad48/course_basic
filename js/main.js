@@ -66,12 +66,13 @@ function clickGalery() {
 
   const targ = document.querySelectorAll('.future .swiper-slide')
   const valueG = document.getElementById('currG')
-  console.log(valueG)
+  
   targ.forEach((el) => {
     el.addEventListener('click', function (e) {
       const tarG = e.target
       let valSpan = tarG.parentElement.ariaLabel
       valueG.innerHTML = valSpan
+  console.log('page-'+valSpan)
       let img = tarG.src.indexOf('/img') + 5
       let nameImg = tarG.src.slice(img)
       let num = nameImg.slice(-7, -4)
@@ -79,24 +80,31 @@ function clickGalery() {
       //console.log(nameImg + 'beg-' + img + '-end -' + num)
       // if (tarG.src.includes('_0') || setData.images[numInt].descr === undefined) {
 
-      //  console.log(nameImg + 'beg-' + img + '-end -' + num);
+        console.log(nameImg + 'beg-' + img + '-end -' + num);
       viewImg(nameImg, num)
       //} else { alert('Описание картины не готово! ') }
     })
+    /* const mod = document.getElementById('myModal')
+    $('#myModal').css({
+      "opacity": "visible"
+    })*/
+
   })/**/
 
   function viewImg(name, num) {
-
+console.log('view-'+ name)
     nameImg = name
-    const objectV = document.getElementById('imgV')
+    const objectV = document.getElementById('myModal')
+    const pr = querySelector('hystmodal')
+    //getElementById('imgV')
     // .toggle('modal-window')
-    objectV.classList.remove('img-hide')
-    objectV.classList.add('modal-window')
+    //objectV.classList.remove('img-hide')
+    //objectV.classList.add('hystmodal__window')
     //$('#modal').css({"left": "0;"})
     let numInt = parseInt(num)
-    //console.log('view-' + objectV.classList)setData.images[numInt].src
-    console.log(nameImg)
-    objectV.innerHTML = `
+    //console.log('view-' + objectV.classList) + setData.images[numInt].src)
+    console.log(pr + '-'+ nameImg +'-'+num);
+    /*objectV.innerHTML = `
     <img class='modal-img' src='../img/${nameImg}'>
     <div class='autor-card'><a class='icon-delete' id='imgDelete'></a>   
     <div class='autor-name'> ${setData.images[numInt].autor} </div>
@@ -105,18 +113,23 @@ function clickGalery() {
     <div class='autor-desc'> ${setData.images[numInt].descr}</div>
     </div>
     `;
-    /* */
+    /* 
     $('#imgV').css({
       'left': '10px',
       'top': '100px'
-    })
-    
-    objectV.addEventListener('click', () => {
-      // console.log('del')
+    })*/
+
+    //objectV.addEventListener('click', () => {
+      /* console.log('del')
       objectV.classList.add('img-hide')
       objectV.classList.remove('modal-window')
-    })
-  
+      */
+      //$('#myModal').css({
+      //  "opacity": "visible"
+      //})
+
+    //})
+
   }
 }
 //clickGalery()
@@ -197,7 +210,7 @@ function initSwiperEditions() {
     },
     renderFraction: function (num_curr, num_all) {
       return '<span className="' + num_curr + '">(index + 1)</span>' +
-        ' / ' +  '<span className="' + num_all + '"></span>';
+        ' / ' + '<span className="' + num_all + '"></span>';
     },/**/
     pagination: {
       el: '.swiper-pagination',

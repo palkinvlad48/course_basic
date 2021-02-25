@@ -8,7 +8,7 @@
   background-size: contain;
   padding: 0px;
   z-index: 1;
-  animation: scaling 8s linear 2;
+  animation: scaling 8s linear 2;/**/
 }
 @keyframes scaling {
   0%   { background-size: 100%; } 

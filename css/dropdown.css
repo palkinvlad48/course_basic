@@ -1,24 +1,35 @@
 .navbar {
-    overflow: hidden;
-    display: inline-flex;/*
-    width: 80%;/**/
+    display: inline-flex;
+    width: 100%;
+    padding-top: 2px;/*
     flex-direction: row;
-    color: white;
-    text-align: center;
-    margin-right: 0px;
-    padding: 0; /*12px*/
-    
+    align-items: center;*/
+    color: #fff;
+    align-items: center;/*
+    overflow: hidden;*/
 }
 .dropdown {
   position: relative;/*
-  float: left;/**/
+  top: 40px;
+  background-color: #ddd; 
+  display: none;/*
+  width: 180px;*/
+  flex-direction: column;
+  flex-wrap: wrap;/*
+  min-width: 250px;/*
+  padding: 10px 10px 0;*/
+  align-content: center;
+  border-top: none;
+  z-index: 30;/*
+  position: relative;/*
+  float: left;/* 23.02 - no*/
   /*display: flex; так не получается 
-  flex-direction: row;*/
-  text-align: left;
-  display: inline-block;
+  flex-direction: row;
+  text-align: left;/*
+  display: inline-block; 23.02 - yes*
   overflow: hidden;
   margin-right: 0;
-  z-index: 20;
+  z-index: 20;*/
 }
 /*.dropdown,*/
 .dropbtn {
@@ -27,6 +38,8 @@
     border: none;
     outline: none;
     color: white;
+    padding: 0px 0 12px;/* 25.02 */
+    /*
     padding: 2px 0 14px;/* 22.02 */
     background-color: inherit;
     font-family: inherit;
@@ -36,25 +49,31 @@
 .dropdown:not(:last-child) {
   margin-right: 93px;
 }
-
-.dropdown-content {/*
+.dropdown-content {
   position: absolute;
-  top: 25px;/**/
-  display: none;/*
-  width: 160px; /* ??? */
+  top: 40px;
+  display: none;
+  min-width: 220px; /* ??? */
   flex-direction: column;
-  padding-top: 10px 0 0;/**/
-  align-content: center;
-  text-align: left;
+  padding-top: 0;
   border-top: none;
-  z-index: 30;/* ??? */
-}
+  z-index: 20;
+}  /*
+@keyframes widthBig {
+  0%   { width: 110px; }
+  100%   { width: 220px; }
+}*/
 .dropdown-content-bg {
-  height: 40px;/*
-  width: 100%;*/
+  position: relative; 
+  height: 40px;
+  padding: 10px;
+  margin-left: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 30;  
+}
+.dropdown-content-bg:not(:last-child) {
+ margin-bottom: 10px;
 }
 .real-1 {
   background-image: url('../img/drop_1.jpg');
@@ -74,22 +93,23 @@
 .real-6 {
   background-image: url('../img/drop_1.jpg');
 }
+
+.dropdown-content-link {/*
+    width: 100%; */
+    margin-left: 10px; 
+    padding: 10px; 
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: white;
+    z-index: 30;/**/
+}
 .dropdown-content-bg:hover,
 .dropdown-content-bg:focus {
   border: 2px solid var(--color-hover);
 }
 .dropdown-content-bg:active {
   background: #C283F3;
-}
-.dropdown-content-link {
-    width: 100%; 
-    font-weight: 400;
-    padding-left: 14px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    line-height: 34px;
-    color: white;
-    z-index: 30;/**/
 }
 .show {
     display: block;

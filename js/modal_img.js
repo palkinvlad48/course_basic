@@ -58,10 +58,28 @@ hovact.addEventListener('click', function () {
     "left": - 630
   })/* не всегда срабатывает !? причина в дрожании ховера ??? */
 })
-/* не работает !???
-    btn_s.onmouseover = function () {
-      $('#s_inp').css({ "color": "red" })
-      console.log('on')
-    };
-  /*btn_s.onmouseout = function () {
-    $('s_inp').css({ "border-bottom": "1px solid #fff" }) };*/
+
+/* ---------- */
+// Находим тег html и сохраняем его
+
+let html = document.documentElement;
+//сохраним текущую прокрутку:
+let scrollPosition = window.pageYOffset;
+//установим свойство top у html равное прокрутке
+html.style.top = -scrollPosition + "px";
+
+html.classList.add("hystmodal__opened");
+
+/* закрытие */
+
+html.classList.remove("hystmodal__opened");
+//прокручиваем окно туда где оно было
+window.scrollTo(0, scrollPosition);
+html.style.top = "";
+
+/*
+const myModal = new HystModal({
+  linkAttributeName: 'data-hystmodal',
+});
+
+*/

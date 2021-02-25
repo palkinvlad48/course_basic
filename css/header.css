@@ -1,8 +1,9 @@
 .header {
-  position: absolute;
+  position: absolute; /*;relative*/
   width: 100%;
   top: 0;
-  left: 0;
+  left: 0;/**/
+  z-index: 10;
 }
 .header-top {/*
   background: rgba(0,0,0,0.4);*/
@@ -36,10 +37,7 @@
 .logo {
   width: 173px;
   height: 100px;
-  margin-right: 180px;/*
-  background-image: url('../svg/logo.svg');
-  background-repeat: no-repeat;
-  background-position: center;*/
+  margin-right: 180px;
 }
 .btn-head {
   position: relative;
@@ -71,20 +69,24 @@
   font-size: 18px;
   letter-spacing: 0.02em;
 }
-.menu-genre { /*
-  position: absolute;
-  top: 100px;
-  left: 0;/**/
-  width: 100%;/* без высоты ломается верстка*
-  height: 70px; /* надо transform для выпадашек !!! */
-  padding-bottom: 12px;
+.menu-genre { 
+  width: 100%; 
+  height: 100%;
+  display: block;
+  align-items: center;
+  padding: 22px 0 15px;
   background: rgba(0,0,0,0.4);
 }
 .wrap-menu {
   width: 100%;
-  padding-top: 22px;/* 22.02 */
-  display: flex;
+  padding-top: 0px;
+  display: inline-flex;
+}/**/
+.menu-body {
+  width: 100%;
+  display: inline-flex;
   justify-content: space-between;
+  margin-top: 0px;
 }
 /**/
 .genre__select {
@@ -100,15 +102,12 @@
 }
 .genre__select:hover::after {
   content: url('../svg/down_v.svg');
-}/*
-.genre__select:not(:last-child) {
-  margin-right: 93px;
 }
 /**/ 
 .search-body {
   display: inline-flex;
-  margin: 0;/*22px
-  line-height: 70px;*/
+  margin-top: 0px;/*22px*/
+  line-height: 70px;/**/
   padding: 0; 
 }
 .search-input {
