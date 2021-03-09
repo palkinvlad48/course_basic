@@ -6421,6 +6421,7 @@
         dynamicBullets: false,
         dynamicMainBullets: 1,
         formatFractionCurrent: function formatFractionCurrent(number) {
+          console.log('Current-' + number)
           return number;
         },
         formatFractionTotal: function formatFractionTotal(number) {

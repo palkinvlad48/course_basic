@@ -8,13 +8,13 @@
   background-size: contain;
   padding: 0px;
   z-index: 1;
-  animation: scaling 8s linear 2;/**/
+  animation: scaling 12s linear infinite;
 }
 @keyframes scaling {
   0%   { background-size: 100%; } 
-  25%  { background-size: 96%; }
-  50%  { background-size: 85%; }
-  75% { background-size: 96%; }
+  25%  { background-size: 106%; }
+  50%  { background-size: 115%; }
+  75% { background-size: 106%; }
   100% { background-size: 100%; }
 }
 .img-content {
@@ -51,6 +51,8 @@
   border-radius: 100px;
   font-weight: 700;
   letter-spacing: 0.0em;
+	border: 2px solid transparent;
+	transition: border 0.3s;
 }
 .btn-hero:hover {/*
   background-color: #7943a4;*/

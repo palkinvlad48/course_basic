@@ -1,3 +1,5 @@
+let old_dr = null // создается клон объекта, если был клик 
+let dubl = 0
 /* удаляет drop */
 function deleteDrop() {
   window.onclick = function (event) {
@@ -11,15 +13,12 @@ function deleteDrop() {
           openDropdown.classList.remove('show');
         }
       }
-
     }
   }
 }
 deleteDrop()
 /* */
 /* переключает между скрытием и отображением раскрывающегося содержимого */
-let old = null // создается клон объекта, если был клик 
-let dubl = 0
 
 function clickDrop() {
 
@@ -30,16 +29,16 @@ function clickDrop() {
     const dropId = $(this).data('id')
 
     let myDropdown = document.getElementById(dropId);
-dubl++
-    if (old) {
-      old.classList.remove('show')
+    dubl++
+    if (old_dr) {
+      old_dr.classList.remove('show')
       dubl = 1
     } //else {
     myDropdown.classList.add("show")
-    old = myDropdown
-    console.log('dubl-'+dubl)
+    old_dr = myDropdown
+    console.log('dubl-' + dubl)
     // не работает 2-й клик подряд на 1 drop
-    
+
   });
 }
 clickDrop()

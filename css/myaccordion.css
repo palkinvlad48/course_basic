@@ -9,10 +9,26 @@
 	padding: 30px 2px;
 	border: none;
 	border-top: 1px solid var(--color-gray);
-}/*
-.ui-accordion-header:nth-last-child() {
-	border-bottom: 1px solid var(--color-gray);
 }
+/* ??? no worked  
+.list-autors .ui-corner-top.ui-accordion-header-collapsed:nth-last-child() {
+	border-bottom: 1px solid var(--color-gray) !important;
+}
+.ui-accordion-header .ui-corner-top .ui-accordion-header-collapsed:nth-last-child() {
+  border-bottom: 1px solid var(--color-gray) !important;
+}*/
+/* ??? no worked 
+.list-autors .ui-accordion-header-collapsed:nth-last-child() {
+	border-bottom: 1px solid var(--color-gray) !important;
+}*/
+.ui-accordion-content-active {
+ border: none;
+}
+
+/* wrap-text ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active
+/* .ui-accordion-header
+.list-autors  ui-corner-top 
+ui-accordion-header-collapsed ui-corner-all
 .ui-accordion-header-active .ui-state-active {
 	outline: none;
 }
@@ -37,8 +53,8 @@
 /* перенес из catalog */
 
 .accordeon-wrap {
-  width: 800px;
-  border-bottom: 1px solid var(--color-gray);
+  width: 800px;/*
+  border-bottom: 1px solid var(--color-gray);*/
   display: flex;
   flex-direction: column;
 }

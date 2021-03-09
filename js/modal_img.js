@@ -1,85 +1,23 @@
-/*  $(window).mousemove(function (pos) {
-      $(".custom-cursor").css({ "transform": "translate3d(" + pos.originalEvent.clientX + "px, " + pos.originalEvent.clientY + "px, 0px)" });
-    });
- 
-    function toggleHover(isHover) {
-      $(".custom-cursor .hover").toggle(isHover);
-    }
- 
-    $('.hover-block').hover(function () {
-      toggleHover(true);
-    }, function () {
-      toggleHover(false);
-    });*/
-
-targ = document.querySelectorAll('.future .swiper-slide')
-let tr = false
-//targ.forEach((el) => 
-for (let i = 0; i < targ.length; i++) {
-
-  targ[i].addEventListener('mouseover', function (e) {
-    //e.stopPropagation()
-    const tarh = e.target
-    let top = 0,
-      left = 0
-    let xx = getCoords(tarh)
-    let dY = 0
-    let topM = pageYOffset
-    let topG = $('#galery').offset().top;
-    //console.log('topm - ' + topM + ' topg -' + topG + ' xx - ' + xx.top)
-    dY = topM - topG + 30;
-    $(".galery-hover").css({
-      "left": xx.left + 30,
-      "top": xx.top + dY
-    })
-    targ[i].addEventListener('click', clickGalery)
-    tr = true
-  })
-  targ[i].addEventListener('mouseout', function (e) {
-    $(".galery-hover").css({
-      "left": - 630
-    })
-  })/**/
-  if (tr) { break }
-}
-
-function getCoords(elem) {
-  var box = elem.getBoundingClientRect();
-  return {
-    top: box.top,
-    left: box.left + pageXOffset
-  }
-}
-
-const hovact = document.querySelector(".galery-hover")
-hovact.addEventListener('click', function () {
-  clickGalery()
-  $(".galery-hover").css({
-    "left": - 630
-  })/* не всегда срабатывает !? причина в дрожании ховера ??? */
-})
-
-/* ---------- */
-// Находим тег html и сохраняем его
-
-let html = document.documentElement;
-//сохраним текущую прокрутку:
-let scrollPosition = window.pageYOffset;
-//установим свойство top у html равное прокрутке
-html.style.top = -scrollPosition + "px";
-
-html.classList.add("hystmodal__opened");
-
-/* закрытие */
-
-html.classList.remove("hystmodal__opened");
-//прокручиваем окно туда где оно было
-window.scrollTo(0, scrollPosition);
-html.style.top = "";
-
-/*
 const myModal = new HystModal({
-  linkAttributeName: 'data-hystmodal',
+	linkAttributeName: 'data-hystmodal',
 });
 
-*/
+const modalElements = document.querySelectorAll('[data-hystmodal]');
+const modal = document.getElementById('myModal');
+
+modalElements.forEach(el => {
+	el.addEventListener('click', (e) => {
+		let self = e.currentTarget;
+		let id = self.dataset.id;
+
+		let currentObj = null //setData[id - 1];
+
+		if (currentObj) {
+			modal.querySelector('.modal-img').setAttribute('src', currentObj.src);
+			modal.querySelector('.autor-name').textContent = currentObj.autor;
+		} else {
+			//modal.querySelector('.modal-img').setAttribute('src', currentObj.src);
+			modal.querySelector('.autor-name').textContent = 'Заглушка';
+		}
+	});
+});

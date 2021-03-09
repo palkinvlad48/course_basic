@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - художественная галерея</title>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="stylesheet" type="text/css" href="./css/normalize.css">
 
   <!--link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="./css/choices.min.css">
 
   <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.css">
+  <link rel="stylesheet" type="text/css" href="./css/simplebar.css">
   <link rel="stylesheet" type="text/css" href="./css/dropdown.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -34,7 +35,7 @@
   <link rel="stylesheet" type="text/css" href="./css/footer.css">
   <link rel="stylesheet" type="text/css" href="./css/modal.css">
   <link rel="stylesheet" type="text/css" href="./css/media.css">
-
+  
   <!-- аккордеон -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="./css/myaccordion.css">
@@ -42,7 +43,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- select -->
   <script src="./js/choices.min.js"></script>
-
+  <script src="./js/simplebar.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <!--script src="./js/main.js"></script-->
 
@@ -85,106 +86,127 @@
     </div>
     <div class="menu-genre">
       <div class="container container-head">
-          <nav class="menu-body">
-            <ul class="navbar">
-              <li class="dropdown">
-                <button class="dropbtn genre__select" data-id="1">Реализм
-                </button>
-                <ul class="dropdown-content" id="1">
-                  <li class="dropdown-content-bg real-1">
-                    <a class="dropdown-content-link" href="#domeniko">Верроккьо</a>
-                  </li>
-                  <li class="dropdown-content-bg real-2">
-                    <a class="dropdown-content-link" href="javascript:void(0)">Леонардо</a>
-                  </li>
-                  <li class="dropdown-content-bg real-3">
-                    <a class="dropdown-content-link" href="#">Фридрих</a>
-                  </li>
-                  <li class="dropdown-content-bg real-4">
-                    <a class="dropdown-content-link" href="#">Тинторетто</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <button class="dropbtn genre__select" data-id="2">Импрессионизм
-                </button>
-                <ul class="dropdown-content" id="2">
-                  <li class="dropdown-content-bg real-5">
-                    <a class="dropdown-content-link" href="#">Моне</a>
-                  </li>
-                  <li class="dropdown-content-bg real-3">
-                    <a class="dropdown-content-link" href="#">Ренуар</a>
-                  </li>
-                  <li class="dropdown-content-bg real-6">
-                    <a class="dropdown-content-link" href="#">Мане</a>
-                  </li>
-                  <li class="dropdown-content-bg real-5">
-                    <a class="dropdown-content-link" href="#">Сислей</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <button class="dropbtn genre__select" data-id="3">Постимпрессионизм
-                </button>
-                <ul class="dropdown-content" id="3">
-                  <li class="dropdown-content-bg real-1">
-                    <a class="dropdown-content-link" href="#">Сёра</a>
-                  </li>
-                  <li class="dropdown-content-bg real-2">
-                    <a class="dropdown-content-link" href="#">Гоген</a>
-                  </li>
-                  <li class="dropdown-content-bg real-3">
-                    <a class="dropdown-content-link" href="#">Сезан</a>
-                  </li>
-                  <li class="dropdown-content-bg real-5">
-                    <a class="dropdown-content-link" href="#">Ван Гог</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <button class="dropbtn genre__select" data-id="4">Авангард
-                </button>
-                <ul class="dropdown-content" id="4">
-                  <li class="dropdown-content-bg real-2">
-                    <a class="dropdown-content-link" href="#">Пикассо</a>
-                  </li>
-                  <li class="dropdown-content-bg real-3">
-                    <a class="dropdown-content-link" href="#">Малевич</a>
-                  </li>
-                  <li class="dropdown-content-bg real-2">
-                    <a class="dropdown-content-link" href="#">Маринетти</a>
-                  </li>
-                  <li class="dropdown-content-bg real-5">
-                    <a class="dropdown-content-link" href="#">Кандинский</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <button class="dropbtn genre__select" data-id="5">Футуризм
-                </button>
-                <ul class="dropdown-content" id="5">
-                  <li class="dropdown-content-bg real-5">
-                    <a class="dropdown-content-link" href="#">Балла</a>
-                  </li>
-                  <li class="dropdown-content-bg real-1">
-                    <a class="dropdown-content-link" href="#">Северини</a>
-                  </li>
-                  <li class="dropdown-content-bg real-2">
-                    <a class="dropdown-content-link" href="#">Прателла</a>
-                  </li>
-                  <li class="dropdown-content-bg real-3">
-                    <a class="dropdown-content-link" href="#">Карра</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <div class="search-body">
-              <button class="btn-search" id="btn_s"></button>
-              <input class="search-input" id="s_inp" type="text" placeholder="Поиск по сайту">
-            </div>
-          </nav>
-        </div>
+        <nav class="menu-body">
+          <ul class="navbar">
+            <li class="dropdown simple-content-wrapper">
+              <button class="dropbtn genre__select" data-id="1">Реализм
+              </button>
+              <ul class="dropdown-content" data-simplebar data-simplebar-auto-hide='false' id="1">
+                <li class="dropdown-content-bg real-1">
+                  <a class="dropdown-content-link" href="#domeniko">Верроккьо</a>
+                </li>
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="javascript:void(0)">Леонардо</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Фридрих</a>
+                </li>
+                <li class="dropdown-content-bg real-4">
+                  <a class="dropdown-content-link" href="#">Тинторетто</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Фридрих</a>
+                </li>
+                <li class="dropdown-content-bg real-4">
+                  <a class="dropdown-content-link" href="#">Тинторетто</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown simple-content-wrapper">
+              <button class="dropbtn genre__select" data-id="2">Импрессионизм
+              </button>
+              <ul class="dropdown-content" data-simplebar data-simplebar-auto-hide='true' id="2">
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Моне</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Ренуар</a>
+                </li>
+                <li class="dropdown-content-bg real-6">
+                  <a class="dropdown-content-link" href="#">Мане</a>
+                </li>
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Сислей</a>
+                </li>
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Моне</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Ренуар</a>
+                </li>
+                <li class="dropdown-content-bg real-6">
+                  <a class="dropdown-content-link" href="#">Мане</a>
+                </li>
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Сислей</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <button class="dropbtn genre__select" data-id="3">Постимпрессионизм
+              </button>
+              <ul class="dropdown-content" data-simplebar data-simplebar-auto-hide='false' id="3">
+                <li class="dropdown-content-bg real-1">
+                  <a class="dropdown-content-link" href="#">Сёра</a>
+                </li>
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="#">Гоген</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Сезан</a>
+                </li>
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Ван Гог</a>
+                </li>
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="#">Гоген</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <button class="dropbtn genre__select" data-id="4">Авангард
+              </button>
+              <ul class="dropdown-content" id="4">
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="#">Пикассо</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Малевич</a>
+                </li>
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="#">Маринетти</a>
+                </li>
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Кандинский</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <button class="dropbtn genre__select" data-id="5">Футуризм
+              </button>
+              <ul class="dropdown-content" id="5">
+                <li class="dropdown-content-bg real-5">
+                  <a class="dropdown-content-link" href="#">Балла</a>
+                </li>
+                <li class="dropdown-content-bg real-1">
+                  <a class="dropdown-content-link" href="#">Северини</a>
+                </li>
+                <li class="dropdown-content-bg real-2">
+                  <a class="dropdown-content-link" href="#">Прателла</a>
+                </li>
+                <li class="dropdown-content-bg real-3">
+                  <a class="dropdown-content-link" href="#">Карра</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="search-body">
+            <button class="btn-search" id="btn_s"></button>
+            <input class="search-input" id="s_inp" type="text" placeholder="Поиск по сайту">
+          </div>
+        </nav>
       </div>
+    </div>
 
     </div>
 
@@ -252,59 +274,65 @@
             <div class="galery-rigth">
               <div class="galery-hover "></div>
               <div class="swiper-container galery-container">
-                <div class="slideNum"><span id="currG" class=""></span></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <!--div class="slideNum"><span id="currG" class=""></span></div-->
+                <!--div class="swiper-container galery-container"-->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-pagination-current">1</div>
+                  <div class="swiper-pagination-total">12</div>
+                  <div class="swiper-button-prev"></div>
 
-                <div class="swiper-wrapper future" data-genre="future">
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_001.jpg" alt="картина">
+                  <div class="swiper-wrapper future" data-genre="future">
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_001.jpg" alt="картина">
+                    </div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_002.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_003.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_004.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_005.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_006.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_007.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_008.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_009.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_010.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_011.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_012.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_013.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_014.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_015.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_016.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_017.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="3"><img src="./img/future_018.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_021.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_022.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_023.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_024.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_025.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_026.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_027.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_028.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_029.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_030.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_031.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="1"><img src="./img/realism_032.jpg" alt="картина"></div>
+                    <div class="swiper-slide" data-filtr="2"><img src="./img/prud_serov_020.jpg"
+                        alt="Серов Заросший Пруд">
+                    </div>
+                    <div class="swiper-slide" data-filtr="2"><img src="./img/kramskoy_034.jpg"
+                        alt="Крамской автопортрет">
+                    </div>
+                    <div class="swiper-slide" data-filtr="2"><img src="./img/ge_m_033.jpg" alt="Ге портрет"></div>
+                    <div class="swiper-slide" data-filtr="2"><img src="./img/kandinsky_036.jpg"
+                        alt="Кандинский Радостная Структура"></div>
+                    <div class="swiper-slide" data-filtr="2"><img src="./img/true_ge_037.jpg" alt="Ге Истина"></div>
                   </div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_002.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_003.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_004.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_005.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_006.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_007.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_008.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_009.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_010.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_011.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_012.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_013.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_014.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_015.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_016.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_017.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="3"><img src="./img/future_018.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_021.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_022.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_023.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_024.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_025.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_026.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_027.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_028.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_029.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_030.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_031.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="1"><img src="./img/realism_032.jpg" alt="картина"></div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/prud_serov_020.jpg"
-                      alt="Серов Заросший Пруд">
-                  </div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/kramskoy_034.jpg" alt="Крамской автопортрет">
-                  </div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/ge_m_033.jpg" alt="Ге портрет"></div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/kandinsky_036.jpg"
-                      alt="Кандинский Радостная Структура"></div>
-                  <div class="swiper-slide" data-filtr="2"><img src="./img/true_ge_037.jpg" alt="Ге Истина"></div>
+                  <!--div class="swiper-pagination-current"></div>
+                  <div class="swiper-pagination-total"></div-->
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div><a href="#" data-hystmodal="#myModal">Открыть окно</a></div>
-      <!--div id="imgV" class="img-hide"></div-->
+        <!--div><a href="#" data-hystmodal="#myModal">Открыть окно</a></div>
+      <div id="imgV" class="img-hide"></div-->
     </section>
     <section class="catalog" id="catalog">
       <div class="container">
@@ -927,8 +955,8 @@
                 <div class="swiper-pagination-total"></div>
               </div>
               <div class="swiper-button-next"></div>
-              <div class="swiper-pagination-current">1</div>
-              <div class="swiper-pagination-total">/3</div>
+              <!--div class="swiper-pagination-current"></div>
+              <div class="swiper-pagination-total"></div-->
               <div class="swiper-button-prev"></div>
 
               <div class="swiper-wrapper editions-wrapper" data-genre="">
@@ -1047,15 +1075,15 @@
         <div class="swiper-container swiper-partners-container">
           <div class="swiper-button-prev"></div>
           <div class="swiper-wrapper wrapper-partners">
-            <div class="partners-slide"><img class="img-partner" src="./png/workhouse.svg" alt=" Партнер 1"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/freelands.svg" alt="Партнер 2"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/institute.svg" alt="Партнер 3"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/1849.svg" alt="Партнер 4"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/hiscox.svg" alt="Партнер 5"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/camden.svg" alt="Партнер 6"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/stassen.svg" alt="Партнер 7"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/watts.svg" alt="Партнер 8"></div>
-            <div class="partners-slide"><img class="img-partner" src="./png/esad.svg" alt="Партнер 9"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/workhouse.svg" alt=" Партнер 1"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/freelands.svg" alt="Партнер 2"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/institute.svg" alt="Партнер 3"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/1849.svg" alt="Партнер 4"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/hiscox.svg" alt="Партнер 5"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/camden.svg" alt="Партнер 6"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/stassen.svg" alt="Партнер 7"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/watts.svg" alt="Партнер 8"></div>
+            <div class="swiper-slide partners-slide"><img class="img-partner" src="./png/esad.svg" alt="Партнер 9"></div>
           </div>
           <div class="swiper-button-next"></div>
         </div>
@@ -1096,22 +1124,25 @@
 
     </section>
   </main>
-  <footer class="footer">
+  <!--footer class="footer">
     <div class="container">
       <div class="footer-body">
         <div class="footer-logo"></div>
         <ul class="footer-list">
-          <li class="footer-list-item"><a href="https://www.vk.com" target="blank" class="footer-list-item-link wk"></a>
+          <li class="footer-list-item">
+            <a href="https://www.vk.com" target="blank" class="footer-list-item-link wk"></a>
           </li>
-          <li class="footer-list-item"><a href="https://www.instagram.com" target="blank"
-              class="footer-list-item-link inst"></a></li>
-          <li class="footer-list-item"><a href="https://www.facebook.com/skillboxru" target="blank"
-              class="footer-list-item-link fb"></a></li>
+          <li class="footer-list-item">
+            <a href="https://www.instagram.com" target="blank" class="footer-list-item-link inst"></a>
+          </li>
+          <li class="footer-list-item">
+            <a href="https://www.facebook.com/skillboxru" target="blank" class="footer-list-item-link fb"></a>
+          </li>
         </ul>
       </div>
     </div>
-  </footer>
-  <!-- modal -->
+  </footer-->
+  <!-- modal >
   <div class="hystmodal" id="myModal" aria-hidden="true">
     <div class="hystmodal__wrap">
       <div class="hystmodal__window" role="dialog" aria-modal="true">
@@ -1125,16 +1156,16 @@
         </div>
 
         <button data-hystclose class="hystmodal__close">Close</button>
-        <!--Текст модального окошка.
-        <img src="img/photo.jpg" alt="Изображение в окне" /-->
+        <Текст модального окошка.
+        <img src="img/photo.jpg" alt="Изображение в окне" />
       </div>
     </div>
   </div>
   <div class="hystmodal__shadow">
 
   </div>
-  <!-- modal -->
-  <script src="./js/just-validate.js"></script>
+  < modal -->
+  <!--script src="./js/just-validate.js"></script>
   <script src="./js/inputmask.min.js"></script>
 
   <script>
@@ -1164,13 +1195,13 @@
         },
       }
     })
-  </script>
+  </script-->
 
   <script src="./js/swiper-bundle.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/map.js"></script>
   <script src="./js/dropdown.js"></script>
-  <script src="./js/modal_img.js"></script>
+  <!--script src="./js/modal_img.js"></script-->
   <!--script src="./js/var_img.js"></script-->
   <!--script src="./js/hystModal.js"></script-->
   <!--script>
@@ -1194,6 +1225,15 @@
         (['../img/birmingham_unsplash_2.jpg', '../img/birmingham_unsplash_1.jpg', '../img/birmingham_unsplash_3.jpg'],
           document.querySelector('.hero'), 0, 5 * 1000);
   </script-->
+  <script>
+    new SimpleBar(document.querySelector('.dropdown-content'), {
+      autoHide: false,
+      // scrollbarMinSize: 190
+    });/*
+    new SimpleBar(document.getElementById('2'), {
+        autoHide: false,
+      });*/
+  </script>
 </body>
 
 </html>

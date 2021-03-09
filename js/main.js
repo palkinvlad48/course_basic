@@ -1,9 +1,8 @@
 //$(document).ready(function () {
 let nameAutor, nameImg = ""
-const setData = {
-  images: [{},
+const setData = [
   {
-    src: '',
+    src: './img/future_001.jpg',
     name: 'Без названия',
     autor: "Кандинский Василий",
     date: "1922-1924",
@@ -59,80 +58,8 @@ const setData = {
     date: "1980...",
     descr: "Картина изображает..."
   }, {},
-  ],
-}
-/* заготовка модального окна */
-function clickGalery() {
+];
 
-  const targ = document.querySelectorAll('.future .swiper-slide')
-  const valueG = document.getElementById('currG')
-  
-  targ.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      const tarG = e.target
-      let valSpan = tarG.parentElement.ariaLabel
-      valueG.innerHTML = valSpan
-  console.log('page-'+valSpan)
-      let img = tarG.src.indexOf('/img') + 5
-      let nameImg = tarG.src.slice(img)
-      let num = nameImg.slice(-7, -4)
-      let numInt = parseInt(num)
-      //console.log(nameImg + 'beg-' + img + '-end -' + num)
-      // if (tarG.src.includes('_0') || setData.images[numInt].descr === undefined) {
-
-        console.log(nameImg + 'beg-' + img + '-end -' + num);
-      viewImg(nameImg, num)
-      //} else { alert('Описание картины не готово! ') }
-    })
-    /* const mod = document.getElementById('myModal')
-    $('#myModal').css({
-      "opacity": "visible"
-    })*/
-
-  })/**/
-
-  function viewImg(name, num) {
-console.log('view-'+ name)
-    nameImg = name
-    const objectV = document.getElementById('myModal')
-    const pr = querySelector('hystmodal')
-    //getElementById('imgV')
-    // .toggle('modal-window')
-    //objectV.classList.remove('img-hide')
-    //objectV.classList.add('hystmodal__window')
-    //$('#modal').css({"left": "0;"})
-    let numInt = parseInt(num)
-    //console.log('view-' + objectV.classList) + setData.images[numInt].src)
-    console.log(pr + '-'+ nameImg +'-'+num);
-    /*objectV.innerHTML = `
-    <img class='modal-img' src='../img/${nameImg}'>
-    <div class='autor-card'><a class='icon-delete' id='imgDelete'></a>   
-    <div class='autor-name'> ${setData.images[numInt].autor} </div>
-    <div class='img-name'> ${setData.images[numInt].name} </div>
-    <div class='autor-date'> ${setData.images[numInt].date} </div>
-    <div class='autor-desc'> ${setData.images[numInt].descr}</div>
-    </div>
-    `;
-    /* 
-    $('#imgV').css({
-      'left': '10px',
-      'top': '100px'
-    })*/
-
-    //objectV.addEventListener('click', () => {
-      /* console.log('del')
-      objectV.classList.add('img-hide')
-      objectV.classList.remove('modal-window')
-      */
-      //$('#myModal').css({
-      //  "opacity": "visible"
-      //})
-
-    //})
-
-  }
-}
-//clickGalery()
 
 /* Italia */
 function initAccItalia() {
@@ -177,6 +104,8 @@ function initSwiper() {
     loop: false,
     updateOnWindowResize: true,
     parallax: false,
+
+    /*
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: false,
@@ -184,11 +113,38 @@ function initSwiper() {
       renderBullet: function (index, slideNum) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
         //return '<span class="' + className + '"></span>';
-      },/* prob */
-    },
+      },
+    },/* prob */
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',/**/
+      currentClass: 'swiper-pagination-current',
+      totalClass: 'swiper-pagination-total',
+      formatFractionCurrent: function formatFractionCurrent(number) {
+        return number;
+      },/*
+      formatFractionTotal: function formatFractionTotal(number) {
+        console.log('total-' + number)
+        return '/' + number;
+      },
+      renderCustom: function (swiper, current, total) {
+        return current + ' of ' + total;
+      },/*
+      renderFraction: function (currentClass, totalClass) {
+        return '<span className="' + currentClass + '"></span>' +
+          ' of ' +
+          '<span className="' + totalClass + '"></span>';
+      }
+      /**/
+      renderFraction: function (currentClass, totalClass, index, total) {
+        return '<span class="' + currentClass + '">' + index + ' </span>' +
+          ' / ' +
+          '<span class="' + totalClass + '">' + total + ' </span>';
+      },/**/
     },
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -203,11 +159,11 @@ function initSwiperEditions() {
 
     slidesPerView: 3,
     slidesPerColumn: 1,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+    },/*
     renderFraction: function (num_curr, num_all) {
       return '<span className="' + num_curr + '">(index + 1)</span>' +
         ' / ' + '<span className="' + num_all + '"></span>';
@@ -215,11 +171,12 @@ function initSwiperEditions() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      type: 'fraction',
       dynamicBullets: false,
-      currentClass: 'swiper-pagination-current',
-      totalClass: 'swiper-pagination-total',/*
+      currentClass: '.swiper-pagination-current',
+      totalClass: '.swiper-pagination-total',
       renderBullet: function (index, num_curr) {
-        //   console.log('bullet-'+index)
+        console.log('bullet-' + index)
         return '<span class="' + num_curr + '">' + (index + 1) + '</span>';
         //return '<span class="' + num_curr + '"></span>';
       },/**/
@@ -233,7 +190,8 @@ function initSwiperEditions() {
 initSwiperEditions()
 
 /* заготовка
-paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
+paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + 
+params.totalClass + "\"></span>");
 
 */
 /* editions: по клику - текущий сайд / общее число */
@@ -251,7 +209,7 @@ function clickSlide() {
     })
   })
 }
-clickSlide()
+//clickSlide()
 
 /* вывод номера текущего слайда */
 function initGalery() {
@@ -260,20 +218,16 @@ function initGalery() {
   //console.log()
   valueSpan.innerHTML = targ.ariaLabel
 }
-initGalery()
+//initGalery()
 
 /* partners */
 function initSwiperPartners() {
-  var mySwiperPartners = new Swiper('.swiper-container', {
+  var mySwiperPartners = new Swiper('.swiper-partners-container', {
     slidesPerView: 3,
-    loop: true,
-    centerSlides: true,
+    slidesPerColumn: 1,
+    loop: false,/*
+    centerSlides: true,*/
     direction: 'horizontal',
-    height: '240px',/* ??? */
-    autoHeight: false,
-    slideClass: 'partners-slide',/**/
-    slideNextClass: 'slide-next',
-    slidePrevClass: 'slide-prev',
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -509,3 +463,31 @@ function showAutor() {
 
 }
 showAutor()
+/* Замена рисунка при ховере */
+function uploadImgPartner() {
+
+  const target = document.querySelectorAll('.img-partner')
+
+  target.forEach((elem) => {
+
+    elem.addEventListener('mouseover', function (e) {
+      const act_img = e.target
+      //console.log('act_img-' + '-' + act_img.src); 
+      let varI = act_img.src.indexOf('svg');
+      
+      let varN = act_img.src.substr(0, varI) + 'png'
+      
+      act_img.src = varN
+    })
+    elem.addEventListener('mouseout', function (e) {
+      const noact_img = e.target
+      
+      let varI = noact_img.src.indexOf('.png');
+      
+      let varN = noact_img.src.substr(0, varI) 
+      
+      noact_img.src = varN + '.svg'
+    })
+  })
+}
+uploadImgPartner()
