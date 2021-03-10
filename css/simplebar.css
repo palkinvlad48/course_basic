@@ -121,7 +121,7 @@
   position: absolute;/*
   top: 20px; /**/
   right: 2px;
-  width: 4px; /* 7 */
+  width: 2px; /* 7 */
   height: 190px !important;/**/
   min-height: 10px;
   cursor: pointer !important;
@@ -130,7 +130,7 @@
 .simplebar-scrollbar:before {
     position: absolute;
     content: "";
-    background: blue;
+    background: #000;
     border-radius: 7px;
     left: 0;
     right: 0;

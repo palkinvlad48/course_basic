@@ -57,7 +57,7 @@
 	max-height: 300px;
   flex-direction: column;/*
   padding-top: 0;*/
-  padding: 0 40px 40px;
+  padding: 40px 40px;
   background: rgba(0, 0, 0, 0.4);/**/
   border-top: none;
   z-index: 20;
