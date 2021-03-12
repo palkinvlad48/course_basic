@@ -122,15 +122,13 @@
   top: 20px; /**/
   right: 2px;
   width: 2px; /* 7 */
-  height: 190px !important;/**/
   min-height: 10px;
-  cursor: pointer !important;
 }
 
 .simplebar-scrollbar:before {
     position: absolute;
     content: "";
-    background: #000;
+    background: #fff;
     border-radius: 7px;
     left: 0;
     right: 0;
@@ -146,7 +144,8 @@
 
 .simplebar-track.simplebar-vertical {
     top: 20px; /* ??? */
-    width: 11px;
+    width: 7px;
+    background-color: #000;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
@@ -183,7 +182,7 @@
 
 .simplebar-track.simplebar-vertical {
 /*  top: 40px;/**/
-  right: 16px;/**/
+  right: 16px;/*
   height: 190px;/**/
   margin-top: 20px;
 }

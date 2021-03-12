@@ -125,6 +125,7 @@
 }
 /* swiper */
 .editions-container {
+  position: relative;
   width: 100%; 
   max-width: 1150px;
   height: 700px; 
@@ -204,11 +205,12 @@
   background-color: var(--color-violet);
 }  
 /* */
+.wrap-slide-num {
+  position: relative;
+  display: inline-flex;
+  margin: 20px 0 0 60px;
+}
 .editions-container .slide-num {
-  position: absolute;
-  display: block;
-  top: 82px;
-  left: 60px;
   font-size: 16px;
   color: #cfcfcf;
 }

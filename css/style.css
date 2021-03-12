@@ -120,13 +120,11 @@ p {
   line-height: 32px;
   letter-spacing: 0em;
 }
-
 .container {
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0px;
-  padding-left: 0px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 .content__title {
   font-weight: 400;

@@ -1,3 +1,15 @@
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .hero {
   margin-top: 100px;/*
   height: 800px;/**/
@@ -6,7 +18,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
-  padding: 0px;
+  padding: 0 0 5px;
   z-index: 1;
   animation: scaling 12s linear infinite;
 }
@@ -17,7 +29,7 @@
   75% { background-size: 106%; }
   100% { background-size: 100%; }
 }
-.img-content {
+.hero-content {
   position: relative;
   padding-top: 139px;
   padding-bottom: 26px;
@@ -27,7 +39,7 @@
   color: #fff;
   z-index: 1;
 }
-.img-content__title {
+.hero-content__title {
   width: 100%;
   margin-bottom: 20px;
   font-size: 72px;
@@ -37,7 +49,7 @@
   text-align: left;
   position: relative;
 }
-.img-content__desc {
+.hero-content__desc {
   width: 100%;
   margin-bottom: 116px;
   font-weight: 700;
@@ -56,13 +68,16 @@
 }
 .btn-hero:hover {/*
   background-color: #7943a4;*/
-  border: 2px solid var(--color-hover);/* 
+  border: 2px solid #d1a9f0;/* var(--color-hover)
   border-radius: 100px;*/
-}
+}/*
+.btn-hero:visited {
+  border: 3px solid #fff;
+}*/
 .btn-hero:active {
   background-color: #7943a4;
 }
-.hero-content {
+.hero-info {
   padding-top: 50px;
   padding-bottom: 68px;
   background-color: #fff;/*

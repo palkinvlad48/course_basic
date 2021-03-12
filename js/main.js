@@ -139,7 +139,7 @@ function initSwiper() {
           ' of ' +
           '<span className="' + totalClass + '"></span>';
       }
-      /**/
+      /*
       renderFraction: function (currentClass, totalClass, index, total) {
         return '<span class="' + currentClass + '">' + index + ' </span>' +
           ' / ' +
@@ -203,22 +203,22 @@ function clickSlide() {
       // e.stopPropagation()
       const tarE = e.target
       let valSpan = tarE.parentNode.parentElement.ariaLabel
-      console.log('1-' + valSpan)
+      //console.log('1-' + valSpan)
       valueR.innerHTML = valSpan
       //swiper-slide swiper-slide-active
     })
   })
 }
-//clickSlide()
+clickSlide()
 
-/* вывод номера текущего слайда */
+/* вывод номера текущего слайда - не получилось */
 function initGalery() {
   const targ = document.querySelector('.swiper-slide-active') //.swiper-slide')
   const valueSpan = document.getElementById('currG')
   //console.log()
   valueSpan.innerHTML = targ.ariaLabel
 }
-//initGalery()
+initGalery()
 
 /* partners */
 function initSwiperPartners() {
